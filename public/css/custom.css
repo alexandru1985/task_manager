@@ -1,0 +1,46 @@
+body {
+    font-size: 1.02rem;
+}
+.custom-container {
+    margin-top:20px;
+}
+.custom-h3 {
+    padding-top: 10px;
+}
+.custom-h1-title {
+    text-align: center;
+}
+.content {
+    margin-top: 20px;
+}
+.custom-table {
+    margin-top: 10px;
+}
+.custom-select{
+    width: 100%;
+}
+.error {
+    color:#ff0000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.content-height {
+    height: 800px;
+}
+.invalid-feedback {
+    display:block;
+    padding-bottom: 5px;
+}
+.vs__clear{
+    margin-top: -5px;
+}
+.router-link-active {
+    color:#fff !important;
+}
+.modal{
+    pointer-events: none;
+}
+
+.modal-dialog{
+    pointer-events: all;
+ }
