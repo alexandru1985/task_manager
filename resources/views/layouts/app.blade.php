@@ -9,14 +9,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('/public/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('/public/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/public/css/fontawesome/css/all.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('/public/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
 
     
     <!-- Scripts -->
-    <script src="{{ asset('public/js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
     <div id="app" class="container-fluid content-height">
