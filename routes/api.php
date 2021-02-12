@@ -24,3 +24,5 @@ Route::get('get-clients','API\TasksController@getClients')->name('get-clients');
 Route::get('get-projects','API\TasksController@getProjects')->name('get-projects');
 Route::get('get-users','API\TasksController@getUsers')->name('get-users');
 Route::post('save-csv-to-db', 'API\ImportCSVController@saveCSVtoDb')->name('save-csv-to-db');
+Route::get('get-user-tasks', 'API\ReportsController@getUserTasks')->name('get-user-tasks');
+Route::get('get-user-roles', 'API\ReportsController@getUserRoles')->name('get-user-roles');

@@ -10,13 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', 'TasksController@index');
-// Route::get('/import-csv', 'ImportCSVController@index')->name('import-csv');
-// Route::post('/save-csv-to-db', 'ImportCSVController@saveCSVtoDb')->name('save-csv-to-db');
-// Route::resource('tasks', 'TasksController');
+
 // Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?')->name('home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
+
 // Route::get('/', 'HomeController@index')->name('home');
 Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?')->name('home');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
