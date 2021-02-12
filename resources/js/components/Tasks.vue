@@ -314,7 +314,7 @@ export default {
             } else {
                 this.filterListUsers = [];
             }
-            this.loadTasks(250, this.filterListUsers, 1);
+            this.loadTasks(200, this.filterListUsers, 1);
         },
         async exportExcelAll(all) {
             await axios.get('api/tasks', {
@@ -356,7 +356,7 @@ export default {
         },
     },
     created() {
-        this.loadTasks(250, this.filterListUsers, this.page);
+        this.loadTasks(200, this.filterListUsers, this.page);
         vueEvent.$on('RefreshData', () => {
             this.loadTasks(0, this.filterListUsers, this.page);
         });

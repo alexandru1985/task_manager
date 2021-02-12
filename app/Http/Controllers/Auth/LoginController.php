@@ -29,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/api/tasks';
+    protected $redirectTo = 'tasks';
 
     /**
      * Create a new controller instance.

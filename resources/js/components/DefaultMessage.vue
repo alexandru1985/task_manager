@@ -11,7 +11,7 @@ export default {
     methods: {
         downloadCSVFile () {
             axios({
-                url: app_url+'/public/files/task_manager.csv',
+                url: app_url+'/files/task_manager.csv',
                 method: 'GET',
                 responseType: 'blob',
             }).then((response) => {

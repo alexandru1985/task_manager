@@ -2230,7 +2230,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     downloadCSVFile: function downloadCSVFile() {
       axios({
-        url: app_url + '/public/files/task_manager.csv',
+        url: app_url + '/files/task_manager.csv',
         method: 'GET',
         responseType: 'blob'
       }).then(function (response) {
@@ -2875,7 +2875,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.filterListUsers = [];
     }
 
-    this.loadTasks(250, this.filterListUsers, 1);
+    this.loadTasks(200, this.filterListUsers, 1);
   }), _defineProperty(_methods, "exportExcelAll", function exportExcelAll(all) {
     var _this7 = this;
 
@@ -2938,7 +2938,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   created: function created() {
     var _this8 = this;
 
-    this.loadTasks(250, this.filterListUsers, this.page);
+    this.loadTasks(200, this.filterListUsers, this.page);
     vueEvent.$on('RefreshData', function () {
       _this8.loadTasks(0, _this8.filterListUsers, _this8.page);
     });
