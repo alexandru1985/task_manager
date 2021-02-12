@@ -38,9 +38,9 @@ import 'leaflet/dist/leaflet.css';
 import { Icon } from "leaflet";
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
-  iconRetinaUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-icon-2x.png',
-  iconUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-icon.png',
-  shadowUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-shadow.png',
+  iconRetinaUrl: '/images/vendor/leaflet/dist/marker-icon-2x.png',
+  iconUrl: '/images/vendor/leaflet/dist/marker-icon.png',
+  shadowUrl: '/images/vendor/leaflet/dist/marker-shadow.png',
 });
 
 // Vue Notification
@@ -63,11 +63,11 @@ Vue.use(VueRouter)
 
 let routes = [
   { path: '/', component: Tasks},
-  { path: '/task_manager/tasks', component: Tasks},
-  { path: '/task_manager/import-csv', component: ImportCSV},
-  { path: '/task_manager/clients-map', component: ClientsMap},
-  { path: '/task_manager/reports', component: Reports},
-  { path: '/task_manager/project-info', component: ProjectInfo},
+  { path: '/tasks', component: Tasks},
+  { path: '/import-csv', component: ImportCSV},
+  { path: '/clients-map', component: ClientsMap},
+  { path: '/reports', component: Reports},
+  { path: '/project-info', component: ProjectInfo},
 ]
 const router = new VueRouter({
   mode: 'history', 

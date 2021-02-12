@@ -8,19 +8,19 @@
       <a class="nav-link active">Task Manager</a>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/task_manager/tasks"><i class="fas fa-list"></i><span class="a-text pl-1">Tasks</span></router-link>
+        <router-link  class="nav-link" to="/tasks"><i class="fas fa-list"></i><span class="a-text pl-1">Tasks</span></router-link>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/task_manager/import-csv"><i class="fas fa-file-download"></i><span class="a-text pl-1">Import CSV</span></router-link>
+        <router-link  class="nav-link" to="/import-csv"><i class="fas fa-file-download"></i><span class="a-text pl-1">Import CSV</span></router-link>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/task_manager/clients-map"><i class="fas fa-map-marker-alt"></i><span class="a-text pl-1">Clients Map</span></router-link>
+        <router-link  class="nav-link" to="/clients-map"><i class="fas fa-map-marker-alt"></i><span class="a-text pl-1">Clients Map</span></router-link>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/task_manager/reports"><i class="fas fa-chart-bar" aria-hidden="true"></i></i><span class="a-text pl-1">Reports</span></router-link>
+        <router-link  class="nav-link" to="/reports"><i class="fas fa-chart-bar" aria-hidden="true"></i></i><span class="a-text pl-1">Reports</span></router-link>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/task_manager/project-info"><i class="fas fa-info" aria-hidden="true"></i></i><span class="a-text pl-1">Project Info</span></router-link>
+        <router-link  class="nav-link" to="/project-info"><i class="fas fa-info" aria-hidden="true"></i></i><span class="a-text pl-1">Project Info</span></router-link>
     </li>
     <li class="nav-item float-right">
                     <!-- Right Side Of Navbar -->

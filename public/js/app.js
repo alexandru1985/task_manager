@@ -124536,9 +124536,9 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.component('v-select', vue_select__WEB
 
 delete leaflet__WEBPACK_IMPORTED_MODULE_6__["Icon"].Default.prototype._getIconUrl;
 leaflet__WEBPACK_IMPORTED_MODULE_6__["Icon"].Default.mergeOptions({
-  iconRetinaUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-icon-2x.png',
-  iconUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-icon.png',
-  shadowUrl: '/task_manager/public/images/vendor/leaflet/dist/marker-shadow.png'
+  iconRetinaUrl: '/images/vendor/leaflet/dist/marker-icon-2x.png',
+  iconUrl: '/images/vendor/leaflet/dist/marker-icon.png',
+  shadowUrl: '/images/vendor/leaflet/dist/marker-shadow.png'
 }); // Vue Notification
 
 
@@ -124558,19 +124558,19 @@ var routes = [{
   path: '/',
   component: _components_Tasks_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
-  path: '/task_manager/tasks',
+  path: '/tasks',
   component: _components_Tasks_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
-  path: '/task_manager/import-csv',
+  path: '/import-csv',
   component: _components_ImportCSV_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
 }, {
-  path: '/task_manager/clients-map',
+  path: '/clients-map',
   component: _components_ClientsMap_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
 }, {
-  path: '/task_manager/reports',
+  path: '/reports',
   component: _components_Reports_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
 }, {
-  path: '/task_manager/project-info',
+  path: '/project-info',
   component: _components_ProjectInfo_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_13__["default"]({
