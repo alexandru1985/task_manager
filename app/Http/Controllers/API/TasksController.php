@@ -20,7 +20,7 @@ class TasksController extends Controller {
     public function index(Request $request) {
         $filterListUsers = $request->filterListUsers;
         $tasks = Tasks::with('users', 'project', 'client')->whereHas('users', function ($q) use ($filterListUsers) {
-                    if (count($filterListUsers) > 0) {
+                    if (!empty($filterListUsers)) {
                         $q->whereIn('users.id', $filterListUsers);
                     }
                 })->orderBy('tasks.id', 'desc');
