@@ -13,13 +13,17 @@
 
 // Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?')->name('home');
 Auth::routes();
+Route::get('/', function () {
+    return redirect('/login');
+});
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 
 // Route::get('/', 'HomeController@index')->name('home');
-Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?')->name('home');
+
+Route::get('{path}',"HomeController@index")->where('path','([-a-z0-9_\s]+)')->name('home');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
