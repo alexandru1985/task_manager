@@ -2645,6 +2645,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2659,6 +2668,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       taskId: '',
       showRows: false,
       notificationType: 0,
+      emptyData: false,
       // Create a new form instance
       form: new Form({
         id: '',
@@ -2752,6 +2762,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.tasks = response.data;
                   _this.json_data = _this.tasks.data;
                   _this.showRows = true;
+                  _this.emptyData = false;
+
+                  if (_this.tasks.data.length == 0) {
+                    _this.emptyData = true;
+                  }
                 });
 
               case 3:
@@ -94951,7 +94966,15 @@ var render = function() {
                       "caption",
                       { staticStyle: { "caption-side": "bottom" } },
                       [_vm._m(1)]
+                    ),
+                _vm._v(" "),
+                _vm.emptyData
+                  ? _c(
+                      "caption",
+                      { staticStyle: { "caption-side": "bottom" } },
+                      [_vm._m(2)]
                     )
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -95279,7 +95302,7 @@ var render = function() {
               [
                 _c("div", { staticClass: "modal-dialog" }, [
                   _c("div", { staticClass: "modal-content" }, [
-                    _vm._m(2),
+                    _vm._m(3),
                     _vm._v(" "),
                     _c(
                       "form",
@@ -95298,7 +95321,7 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _vm._m(3)
+                        _vm._m(4)
                       ]
                     )
                   ])
@@ -95352,6 +95375,23 @@ var staticRenderFns = [
             },
             [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
           )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "d-flex flex-column align-items-center justify-content-center"
+      },
+      [
+        _c("div", { staticClass: "row" }, [
+          _c("div", [_c("span", [_vm._v("No tasks found")])])
         ])
       ]
     )

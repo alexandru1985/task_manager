@@ -75,6 +75,15 @@
                         </div>
                     </div>
                 </caption>
+                <caption v-if="emptyData" style="caption-side: bottom;">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <div class="row">
+                            <div>
+                                <span>No tasks found</span>
+                            </div>
+                        </div>
+                    </div>
+                </caption>
             </table>
         </div>
         <div v-if="showRows" class="box-footer clearfix">
@@ -176,6 +185,7 @@ export default {
             taskId: '',
             showRows: false,
             notificationType: 0,
+            emptyData: false,
 
             // Create a new form instance
             form: new Form({
@@ -264,7 +274,10 @@ export default {
                 this.tasks = response.data;
                 this.json_data = this.tasks.data;
                 this.showRows = true;
-
+                this.emptyData = false;
+                if(this.tasks.data.length == 0) {
+                    this.emptyData = true;
+                }
             });
 
             // Get notification after the tasks are loaded on RefreshData event
