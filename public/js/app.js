@@ -2201,7 +2201,6 @@ __webpack_require__.r(__webpack_exports__);
         };
       });
       _this.clients = arr;
-      console.log(_this.clients);
     });
   },
   mounted: function mounted() {}
@@ -94867,7 +94866,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "container-fluid" }, [
-              _c("table", { staticClass: "custom-table table table-striped" }, [
+              _c("table", { staticClass: "table table-striped" }, [
                 _vm._m(0),
                 _vm._v(" "),
                 _vm.showRows
@@ -94971,7 +94970,7 @@ var render = function() {
             _vm.showRows
               ? _c(
                   "div",
-                  { staticClass: "box-footer clearfix" },
+                  { staticClass: "position-pagination" },
                   [
                     _c("pagination", {
                       staticClass:

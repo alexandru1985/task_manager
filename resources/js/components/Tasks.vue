@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <table class="custom-table table table-striped">
+            <table class="table table-striped">
                 <thead>
                     <tr class="row">
                         <th class="col-2">Client</th>
@@ -86,7 +86,7 @@
                 </caption>
             </table>
         </div>
-        <div v-if="showRows" class="box-footer clearfix">
+        <div v-if="showRows" class="position-pagination">
             <pagination :data="tasks" class="pagination pagination-md no-margin float-right" @pagination-change-page="getResults"></pagination>
         </div>
         <div class="modal" id="task-form">

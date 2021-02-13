@@ -72,7 +72,6 @@ export default {
 
                     });
                     this.clients = arr;
-                    console.log(this.clients)
                 }
             )
     },
