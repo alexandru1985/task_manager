@@ -66,7 +66,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <caption v-else style="caption-side: bottom;">
+                <caption v-else>
                     <div class="d-flex flex-column align-items-center justify-content-center">
                         <div class="row">
                             <div class="spinner-border text-primary" role="status">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </caption>
-                <caption v-if="emptyData" style="caption-side: bottom;">
+                <caption v-if="emptyData">
                     <div class="d-flex flex-column align-items-center justify-content-center">
                         <div class="row">
                             <div>

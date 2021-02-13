@@ -94962,19 +94962,9 @@ var render = function() {
                       }),
                       0
                     )
-                  : _c(
-                      "caption",
-                      { staticStyle: { "caption-side": "bottom" } },
-                      [_vm._m(1)]
-                    ),
+                  : _c("caption", [_vm._m(1)]),
                 _vm._v(" "),
-                _vm.emptyData
-                  ? _c(
-                      "caption",
-                      { staticStyle: { "caption-side": "bottom" } },
-                      [_vm._m(2)]
-                    )
-                  : _vm._e()
+                _vm.emptyData ? _c("caption", [_vm._m(2)]) : _vm._e()
               ])
             ]),
             _vm._v(" "),
