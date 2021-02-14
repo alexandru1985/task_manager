@@ -5,7 +5,7 @@
         <notifications group="add-task" classes="add-task-notification"/>
         <notifications group="update-task" classes="update-task-notification"/>
         <notifications group="delete-task" classes="delete-task-notification"/>
-        <div class="row row-buttons">
+        <div class="row">
             <div class="col-6">
                 <button type="button" class="btn btn-primary" @click="newModal()" data-toggle="modal" data-target="#task-form" data-backdrop="static" data-keyboard="false">Add Task <i class="fas fa-plus"></i></button>
             </div>

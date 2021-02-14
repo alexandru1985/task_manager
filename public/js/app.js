@@ -2404,10 +2404,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       showMessage: false,
+      showLoading: false,
       // Create a new form instance
       form: new Form({
         file_csv: '',
@@ -2438,16 +2447,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                _this2.showLoading = true;
+                _context.next = 3;
                 return _this2.form.post('api/save-csv-to-db').then(function () {})["catch"](function (error) {});
 
-              case 2:
+              case 3:
+                _this2.showLoading = false;
+
                 if (!_this2.form.errors.errors.hasOwnProperty('file_csv') && !_this2.form.errors.errors.hasOwnProperty('file_type')) {
+                  _this2.showLoading = false;
                   _this2.showMessage = true;
                   app.checkImportCSV = 1;
                 }
 
-              case 3:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -94540,72 +94553,93 @@ var render = function() {
   return _c("div", [
     _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Import CSV")]),
     _vm._v(" "),
-    _vm.showMessage == false
-      ? _c("div", [
-          _c(
-            "form",
-            {
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.saveCSVtoDb()
-                }
-              }
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "form-group ",
-                  class: {
-                    "has-error": _vm.form.errors.has("file_csv", "file_type")
+    _c("div", { staticClass: "d-flex flex-row" }, [
+      _vm.showMessage == false
+        ? _c("div", [
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.saveCSVtoDb()
                   }
-                },
-                [
-                  _c("label", { attrs: { for: "file_csv" } }, [
-                    _vm._v("Select csv file:")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    attrs: { type: "file", id: "file_csv" },
-                    on: {
-                      change: function($event) {
-                        return _vm.getCSVFile()
-                      }
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group ",
+                    class: {
+                      "has-error": _vm.form.errors.has("file_csv", "file_type")
                     }
-                  }),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("has-error", {
-                    attrs: { form: _vm.form, field: "file_csv" }
-                  }),
-                  _vm._v(" "),
-                  _c("has-error", {
-                    attrs: { form: _vm.form, field: "file_type" }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Import")]
-                  )
-                ],
-                1
-              )
-            ]
-          )
-        ])
-      : _c("div", [
-          _vm._v("The csv file was imported. Please click on "),
-          _c("b", [_vm._v("Tasks")]),
-          _vm._v(" from above menu.")
-        ])
+                  },
+                  [
+                    _c("label", { attrs: { for: "file_csv" } }, [
+                      _vm._v("Select csv file:")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      attrs: { type: "file", id: "file_csv" },
+                      on: {
+                        change: function($event) {
+                          return _vm.getCSVFile()
+                        }
+                      }
+                    }),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("has-error", {
+                      attrs: { form: _vm.form, field: "file_csv" }
+                    }),
+                    _vm._v(" "),
+                    _c("has-error", {
+                      attrs: { form: _vm.form, field: "file_type" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Import")]
+                    )
+                  ],
+                  1
+                )
+              ]
+            )
+          ])
+        : _c("div", [
+            _vm._v("The csv file was imported. Please click on "),
+            _c("b", [_vm._v("Tasks")]),
+            _vm._v(" from above menu.")
+          ]),
+      _vm._v(" "),
+      _vm.showLoading
+        ? _c("div", { staticClass: "pt-1" }, [_vm._v("Loading ...  ")])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.showLoading
+        ? _c("div", { staticClass: "pt-1 pl-2" }, [_vm._m(0)])
+        : _vm._e()
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -94747,7 +94781,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "row row-buttons" }, [
+            _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-6" }, [
                 _c(
                   "button",
