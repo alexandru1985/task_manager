@@ -14,8 +14,8 @@
                 </form>
             </div>
         <div v-else >The csv file was imported. Please click on <b>Tasks</b> from above menu.</div>
-        <div v-if="showLoading" class="spinner-text">Loading ...  </div>
-        <div v-if="showLoading" class="spinner">
+        <div v-if="showLoading">Loading ...  </div>
+        <div v-if="showLoading" class="pl-2">
             <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
