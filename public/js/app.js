@@ -94671,7 +94671,7 @@ var staticRenderFns = [
     return _c("div", [
       _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Project Info")]),
       _vm._v(" "),
-      _c("div", [_vm._v("\n            1234\n    ")])
+      _c("div", [_vm._v("\n            1234adfasdfasdf\n    ")])
     ])
   }
 ]
