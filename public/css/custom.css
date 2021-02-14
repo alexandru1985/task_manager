@@ -86,3 +86,7 @@ body {
 #file_csv {
     width: 250px; 
 }
+
+.custom-container {
+    height: 470px;
+}

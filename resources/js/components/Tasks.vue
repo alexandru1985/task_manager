@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid custom-container">
             <table class="table table-striped">
                 <thead>
                     <tr class="row">
