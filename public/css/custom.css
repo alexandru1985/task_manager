@@ -90,3 +90,6 @@ body {
 .custom-container {
     height: 470px;
 }
+html {
+    font-size: 16px !important;
+    }
