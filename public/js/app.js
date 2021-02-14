@@ -94618,13 +94618,9 @@ var render = function() {
             _vm._v(" from above menu.")
           ]),
       _vm._v(" "),
-      _vm.showLoading
-        ? _c("div", { staticClass: "spinner-text" }, [_vm._v("Loading ...  ")])
-        : _vm._e(),
+      _c("div", { staticClass: "spinner-text" }, [_vm._v("Loading ...  ")]),
       _vm._v(" "),
-      _vm.showLoading
-        ? _c("div", { staticClass: "spinner" }, [_vm._m(0)])
-        : _vm._e()
+      _vm._m(0)
     ])
   ])
 }
@@ -94633,11 +94629,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "spinner-border", attrs: { role: "status" } },
-      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
-    )
+    return _c("div", { staticClass: "spinner" }, [
+      _c("div", { staticClass: "spinner-border", attrs: { role: "status" } }, [
+        _c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])
+      ])
+    ])
   }
 ]
 render._withStripped = true
