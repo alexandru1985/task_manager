@@ -83,8 +83,6 @@ body {
     background: #e54d42 !important;
     border-left: 5px solid #b82e24 !important;
 }
-.position-pagination {
-    position:absolute;
-    right: 0px;
-    bottom:20px;
+#file_csv {
+    width: 250px; 
 }

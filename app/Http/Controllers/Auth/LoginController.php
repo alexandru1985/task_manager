@@ -38,7 +38,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->cleanData();
         $this->middleware('guest')->except('logout');
     }
 
@@ -63,15 +62,5 @@ class LoginController extends Controller
         } catch (Exception $e) {
             return redirect('redirect');
         }
-      }
-    public function cleanData() {
-        DB::table('users')->where('id', '>', 1)->delete();
-        DB::update('ALTER TABLE users AUTO_INCREMENT = 2');
-        DB::table('clients')->truncate();
-        DB::table('projects')->truncate();
-        DB::table('roles')->truncate();
-        DB::table('tasks')->truncate();
-        DB::table('user_tasks')->truncate();
-    }
-    
+      }   
 }

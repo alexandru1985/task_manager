@@ -15,21 +15,21 @@
                         <div @click="getListUsers()">
                             <form id="filterByUsers">
                                 <v-select @input="filterByUsers()" multiple label="name" v-model="formFilter.listUsers"  :options="listUsers" id="filter_assigned_users" class="select-options" placeholder="Filter Assigned Users">
-                                      <span slot="no-options">Loading ...</span>
+                                      <span slot="no-options"></span>
                                 </v-select>
                             </form>
                         </div>
                         <div>
                             <div class="box-footer clearfix">
                                 <div class="btn-group">           
-                                        <export-excel
-                                            class   = "btn btn-primary"
-                                            :before-generate="()=>{return exportExcelAll('all')}"
-                                            :data   = "json_data"
-                                            :fields = "json_fields"
-                                            worksheet = "My Worksheet"
-                                            name    = "tasks_cp.xls"><i class="fas fa-file-excel"></i> Excel
-                                        </export-excel>  
+                                    <export-excel
+                                        class   = "btn btn-primary"
+                                        :before-generate="()=>{return exportExcelAll('all')}"
+                                        :data   = "json_data"
+                                        :fields = "json_fields"
+                                        worksheet = "My Worksheet"
+                                        name    = "tasks_cp.xls"><i class="fas fa-file-excel"></i> Excel
+                                    </export-excel>  
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                 </caption>
             </table>
         </div>
-        <div v-if="showRows" class="position-pagination">
+        <div v-if="showRows">
             <pagination :data="tasks" class="pagination pagination-md no-margin float-right" @pagination-change-page="getResults"></pagination>
         </div>
         <div class="modal" id="task-form">
