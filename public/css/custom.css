@@ -87,3 +87,10 @@ body {
 html {
     font-size: 16px !important;
     }
+.spinner-text {
+    padding-top: 3.5px;
+}
+.spinner {
+    padding-top: 3.5px;
+    padding-left: 5px;
+}

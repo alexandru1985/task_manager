@@ -2902,7 +2902,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.filterListUsers = [];
     }
 
-    this.loadTasks(200, this.filterListUsers, 1);
+    this.loadTasks(150, this.filterListUsers, 1);
   }), _defineProperty(_methods, "exportExcelAll", function exportExcelAll(all) {
     var _this7 = this;
 
@@ -2965,7 +2965,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   created: function created() {
     var _this8 = this;
 
-    this.loadTasks(200, this.filterListUsers, this.page);
+    this.loadTasks(150, this.filterListUsers, this.page);
     vueEvent.$on('RefreshData', function () {
       _this8.loadTasks(0, _this8.filterListUsers, _this8.page);
     });
@@ -94619,11 +94619,11 @@ var render = function() {
           ]),
       _vm._v(" "),
       _vm.showLoading
-        ? _c("div", { staticClass: "pt-1" }, [_vm._v("Loading ...  ")])
+        ? _c("div", { staticClass: "spinner-text" }, [_vm._v("Loading ...  ")])
         : _vm._e(),
       _vm._v(" "),
       _vm.showLoading
-        ? _c("div", { staticClass: "pt-1 pl-2" }, [_vm._m(0)])
+        ? _c("div", { staticClass: "spinner" }, [_vm._m(0)])
         : _vm._e()
     ])
   ])
