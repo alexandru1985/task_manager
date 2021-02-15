@@ -10,6 +10,7 @@ use App\Models\Clients;
 use App\Models\Projects;
 use App\Models\Users;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class TasksController extends Controller {
 
@@ -91,11 +92,21 @@ class TasksController extends Controller {
         }
     }
 
-    public function destroy($id) {
+    public function destroy($id, Request $request) {
         $tasks = Tasks::findOrFail($id);
         if ($tasks->delete()) {
             $tasks->users()->detach();
-            return response()->json(['message' => 'The task was deleted'], 200);
+            if(!empty($request->filterListUsers)) {
+                $totalTasks = DB::table('users')
+                ->select('users.name', DB::raw('count(user_tasks.task_id) as tasks'))
+                ->join('user_tasks', 'users.id', '=', 'user_tasks.user_id')->whereIn('user_tasks.user_id', $request->filterListUsers)
+                ->count();
+            }
+            else {
+                $totalTasks = DB::table('tasks')->count();
+            }
+            $paginate = $totalTasks / 7;
+            return response()->json(['message' => 'The task was deleted', 'paginate'=> $paginate], 200);
         }
     }
 

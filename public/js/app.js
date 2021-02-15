@@ -2734,7 +2734,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     newModal: function newModal() {
       this.fillSelects();
-      this.page = 0;
+      this.page = 1;
       this.editMode = false;
       this.form.clear();
       this.form.reset();
@@ -2854,7 +2854,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           switch (_context4.prev = _context4.next) {
             case 0:
               _context4.next = 2;
-              return _this4.form["delete"]('api/tasks/' + _this4.taskId).then(function () {
+              return _this4.form["delete"]('api/tasks/' + _this4.taskId, {
+                data: {
+                  filterListUsers: _this4.filterListUsers
+                }
+              }).then(function (response) {
+                var paginate = response.data.paginate;
+
+                if (Number.isInteger(paginate)) {
+                  _this4.page = 1;
+                }
+
                 $('.modal-header button')[1].click();
                 vueEvent.$emit('RefreshData');
               });
@@ -2889,6 +2899,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     });
   }), _defineProperty(_methods, "filterByUsers", function filterByUsers() {
     this.showRows = false;
+    this.emptyData = false;
+    this.page = 1;
     var filterListUsers = [];
     var selectedUsers = this.formFilter.listUsers;
 

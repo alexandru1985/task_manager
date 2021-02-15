@@ -243,7 +243,7 @@ export default {
         },
         newModal() {
             this.fillSelects();
-            this.page = 0;
+            this.page = 1;
             this.editMode = false;
             this.form.clear();
             this.form.reset();
@@ -279,7 +279,6 @@ export default {
                     this.emptyData = true;
                 }
             });
-
             // Get notification after the tasks are loaded on RefreshData event
             this.getNotificationType();
         },
@@ -301,7 +300,15 @@ export default {
             this.taskId = taskId;
         },
         async deleteTask() {
-            await this.form.delete('api/tasks/' + this.taskId).then(() => {
+            await this.form.delete('api/tasks/' + this.taskId, { 
+                data: { 
+                    filterListUsers: this.filterListUsers
+                }
+            }).then((response) => {
+                var paginate = response.data.paginate;
+                if(Number.isInteger(paginate)) {
+                    this.page = 1;
+                }
                 $('.modal-header button')[1].click();
                 vueEvent.$emit('RefreshData');
             })
@@ -317,6 +324,8 @@ export default {
         },
         filterByUsers() {
             this.showRows = false;
+            this.emptyData = false;
+            this.page = 1;
             let filterListUsers = [];
             let selectedUsers = this.formFilter.listUsers;
             for (let i = 0; i < selectedUsers.length; i++) {
@@ -370,6 +379,7 @@ export default {
     },
     created() {
         this.loadTasks(150, this.filterListUsers, this.page);
+
         vueEvent.$on('RefreshData', () => {
             this.loadTasks(0, this.filterListUsers, this.page);
         });
