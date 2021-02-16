@@ -1,0 +1,15 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet');
+
+// Variables
+@import 'variables';
+
+// @import "variables";
+
+$primary: #192841;
+$invalid-feedback:	 #cc0000;
+$vs-state-active-bg: #192841 !default;
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import "vue-select/src/scss/vue-select.scss";

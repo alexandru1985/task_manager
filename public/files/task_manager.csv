@@ -1,0 +1,16 @@
+Client,Client Latitude,Client Longitude,Project,Task,Assigned Users,User Roles Involved
+Universal Software,40.712728,-74.006015,Instant Online Data,Import Client Data,"James, Alice, Samantha","Developer, Tester, Project Manager"
+Universal Software,40.712728,-74.006015,Instant Online Data,Develop website design,Evelyn,Designer
+Universal Software,40.712728,-74.006015,Instant Online Data,Develop website programming,James,Developer
+Universal Software,40.712728,-74.006015,Instant Online Data,Test website,Alice,Tester
+Universal Software,40.712728,-74.006015,Instant Online Data,Fix test results and recheck,"James, Alice","Developer, Tester"
+Universal Software,40.712728,-74.006015,Instant Online Data,Deploy website,James,Developer
+Universal Software,40.712728,-74.006015,Instant Online Data,Manager Support,Samantha,Project Manager
+Universal Software,40.712728,-74.006015,Upgrade My Service Project,Subscription Module,"Evelyn, James","Designer, Developer"
+Universal Software,40.712728,-74.006015,Upgrade My Service Project,Payments Module,"Evelyn, James","Designer, Developer"
+Universal Software,40.712728,-74.006015,Upgrade My Service Project,Manager Support,Samantha,Project Manager
+Gamma Horizon,42.360253,-71.058291,Online Form Data Collector,Create astonishing new form design,Evelyn,Designer
+Gamma Horizon,42.360253,-71.058291,Online Form Data Collector,Collect form data front-end,James,Developer
+Gamma Horizon,42.360253,-71.058291,Online Form Data Collector,Build back-end to display collected data,Hailey,Developer
+Gamma Horizon,42.360253,-71.058291,Online Form Data Collector,Collect statistics and send them by mail,Hailey,Developer
+Gamma Horizon,42.360253,-71.058291,Online Form Data Collector,Manager Support,Austin,Project Manager

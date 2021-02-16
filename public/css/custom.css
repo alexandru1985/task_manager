@@ -1,0 +1,90 @@
+body {
+    font-size: 1.02rem;
+}
+.custom-container {
+    margin-top:20px;
+}
+.custom-h3 {
+    padding-top: 10px;
+}
+.custom-h1-title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.content {
+    margin-top: 20px;
+}
+.custom-select{
+    width: 100%;
+}
+.error {
+    color:#ff0000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.invalid-feedback {
+    display:block;
+    padding-bottom: 5px;
+}
+.vs__clear{
+    margin-top: -4px;
+}
+.router-link-active {
+    color:#fff !important;
+}
+.modal{
+    pointer-events: none;
+}
+.modal-dialog{
+    pointer-events: all;
+}
+.row-buttons {
+    padding-bottom: 20px;
+}
+#filter_assigned_users {
+    min-width: 203px;
+}
+#filter_assigned_users .vs__dropdown-toggle {
+    height: 37.5px;
+    margin-right: 3px;
+}
+.dropdown-item {
+    text-align: right;
+}
+.invalid-feedback {
+    color:#ff0000;
+}
+.btn-left {
+    margin-right: 3px;
+}
+.add-task-notification, .update-task-notification {
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 61px;
+    margin-right: 15px;
+    margin-left: 5.5px;
+    color: #fff;
+    background-color: #5a7fbf !important;
+    border-left: 5px solid #324f81 !important;
+}
+.delete-task-notification {
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 61px;
+    margin-right: 15px;
+    margin-left: 5.5px;
+    color: #fff;
+    background: #e54d42 !important;
+    border-left: 5px solid #b82e24 !important;
+}
+#file_csv {
+    width: 250px; 
+    line-height: 1 !important;
+}
+
+.custom-container {
+    min-height: 470px;
+}
+html {
+    font-size: 16px !important;
+    }
