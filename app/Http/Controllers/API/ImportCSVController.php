@@ -83,7 +83,7 @@ class ImportCSVController extends Controller {
                     }
                 }
             }
-            return response()->json(['message' => 'The csv file was saved to database'], 200);
+            return response()->json(['message' => 'The csv file is saved to database'], 200);
         }
     }
 

@@ -186,6 +186,7 @@ export default {
             showRows: false,
             notificationType: 0,
             emptyData: false,
+            defaultObject: true,
 
             // Create a new form instance
             form: new Form({
@@ -325,6 +326,7 @@ export default {
         filterByUsers() {
             this.showRows = false;
             this.emptyData = false;
+            this.defaultObject = false;
             this.page = 1;
             let filterListUsers = [];
             let selectedUsers = this.formFilter.listUsers;
@@ -352,7 +354,7 @@ export default {
                     this.$notify({
                         group: 'add-task',
                         title: 'Notification',
-                        text: 'Task was created',
+                        text: 'Task created',
                         duration: 2000,
                     });
                     break;
@@ -360,7 +362,7 @@ export default {
                     this.$notify({
                         group: 'update-task',
                         title: 'Notification',
-                        text: 'Task was updated',
+                        text: 'Task updated',
                         duration: 2000,
                     });
                     break;
@@ -368,7 +370,7 @@ export default {
                     this.$notify({
                         group: 'delete-task',
                         title: 'Notification',
-                        text: 'Task was deleted',
+                        text: 'Task deleted',
                         duration: 2000,
                     });
                     break;
@@ -378,8 +380,9 @@ export default {
         },
     },
     created() {
-        this.loadTasks(150, this.filterListUsers, this.page);
-
+        if(this.defaultObject) {
+            this.loadTasks(150, this.filterListUsers, this.page);
+        }
         vueEvent.$on('RefreshData', () => {
             this.loadTasks(0, this.filterListUsers, this.page);
         });

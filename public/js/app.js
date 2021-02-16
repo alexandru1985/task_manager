@@ -2681,6 +2681,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       showRows: false,
       notificationType: 0,
       emptyData: false,
+      defaultObject: true,
       // Create a new form instance
       form: new Form({
         id: '',
@@ -2900,6 +2901,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   }), _defineProperty(_methods, "filterByUsers", function filterByUsers() {
     this.showRows = false;
     this.emptyData = false;
+    this.defaultObject = false;
     this.page = 1;
     var filterListUsers = [];
     var selectedUsers = this.formFilter.listUsers;
@@ -2946,7 +2948,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         this.$notify({
           group: 'add-task',
           title: 'Notification',
-          text: 'Task was created',
+          text: 'Task created',
           duration: 2000
         });
         break;
@@ -2955,7 +2957,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         this.$notify({
           group: 'update-task',
           title: 'Notification',
-          text: 'Task was updated',
+          text: 'Task updated',
           duration: 2000
         });
         break;
@@ -2964,7 +2966,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         this.$notify({
           group: 'delete-task',
           title: 'Notification',
-          text: 'Task was deleted',
+          text: 'Task deleted',
           duration: 2000
         });
         break;
@@ -2977,7 +2979,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   created: function created() {
     var _this8 = this;
 
-    this.loadTasks(150, this.filterListUsers, this.page);
+    if (this.defaultObject) {
+      this.loadTasks(150, this.filterListUsers, this.page);
+    }
+
     vueEvent.$on('RefreshData', function () {
       _this8.loadTasks(0, _this8.filterListUsers, _this8.page);
     });
@@ -94519,9 +94524,10 @@ var render = function() {
     _c("p", [
       _vm._v("\n        First you must download a csv file from "),
       _c(
-        "span",
+        "a",
         {
-          staticStyle: { color: "red", cursor: "pointer" },
+          staticStyle: { color: "red" },
+          attrs: { href: "#" },
           on: {
             click: function($event) {
               return _vm.downloadCSVFile()
@@ -94625,9 +94631,9 @@ var render = function() {
             )
           ])
         : _c("div", [
-            _vm._v("The csv file was imported. Please click on "),
+            _vm._v("The csv file is imported. Please click on "),
             _c("b", [_vm._v("Tasks")]),
-            _vm._v(" from above menu.")
+            _vm._v(" from menu above.")
           ]),
       _vm._v(" "),
       _vm.showLoading ? _c("div", [_vm._v("Loading ...  ")]) : _vm._e(),
@@ -94681,7 +94687,166 @@ var staticRenderFns = [
     return _c("div", [
       _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Project Info")]),
       _vm._v(" "),
-      _c("div", [_vm._v("\n            1234adfasdfasdf\n    ")])
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Description")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("span", [
+            _vm._v(
+              "This is a demo project with similar developed features on my professional experience."
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Technologies")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("span", [_vm._v("Laravel 5.8, Vue, Bootstrap 4.")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Deployment")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("span", [_vm._v("Heroku Cloud.")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Developed Features")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [_vm._v("- login system;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v(
+                "- import csv file to database. In Tasks module rows will be displayed order by desc;"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v(
+                "- RESTful API on Tasks module, use Eloquent Relationships for queries;"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("- secure requests with Laravel Passport;")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [_vm._v("- form validation;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [_vm._v("- data pagination;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("- filter data by assigned users;")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v(
+                "- export data in xls format, Excel. It will export all data, not just current page;"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v(
+                "- optimisations looking CRUD actions, pagination and filter data;"
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("- integrate APIs: Leaflet Map, Chart.js.")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Code Source")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("Click "),
+              _c("b", [
+                _c(
+                  "a",
+                  {
+                    staticStyle: { color: "red" },
+                    attrs: {
+                      href: "https://github.com/alexandru1985/task_manager"
+                    }
+                  },
+                  [_vm._v("here")]
+                )
+              ]),
+              _vm._v(" to see project on GitHub.")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [_vm._v(" Main file paths:")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- app/Http/Controllers/API;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- app/Models;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- resources/js/components.")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Note")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("span", [
+            _vm._v(
+              "Every time when you make a new login must import csv file again."
+            )
+          ])
+        ])
+      ])
     ])
   }
 ]

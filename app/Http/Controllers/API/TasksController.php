@@ -57,7 +57,7 @@ class TasksController extends Controller {
 
             $tasks->users()->attach($pivot);
 
-            return response()->json(['message' => 'Task was created'], 201);
+            return response()->json(['message' => 'Task created'], 201);
         }
     }
 
@@ -88,7 +88,7 @@ class TasksController extends Controller {
 
                 $tasks->users()->sync($pivot);
             }
-            return response()->json('The task successfully updated');
+            return response()->json(['message' => 'Task updated'], 200);
         }
     }
 
@@ -106,7 +106,7 @@ class TasksController extends Controller {
                 $totalTasks = DB::table('tasks')->count();
             }
             $paginate = $totalTasks / 7;
-            return response()->json(['message' => 'The task was deleted', 'paginate'=> $paginate], 200);
+            return response()->json(['message' => 'Task deleted', 'paginate'=> $paginate], 200);
         }
     }
 
