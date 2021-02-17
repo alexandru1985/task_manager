@@ -94793,6 +94793,49 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-2 text-right" }, [
+          _c("span", [_c("b", [_vm._v("Code Source")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-6" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("Click "),
+              _c("b", [
+                _c(
+                  "a",
+                  {
+                    staticStyle: { color: "red" },
+                    attrs: {
+                      href: "https://github.com/alexandru1985/task_manager"
+                    }
+                  },
+                  [_vm._v("here")]
+                )
+              ]),
+              _vm._v(" to see project on GitHub.")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [_vm._v(" Main file paths:")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- app/Http/Controllers/API;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- app/Models;")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row pl-3" }, [
+            _c("span", [_vm._v("- resources/js/components.")])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-2 text-right" }, [
           _c("span", [_c("b", [_vm._v("Note")])])
         ]),
         _vm._v(" "),

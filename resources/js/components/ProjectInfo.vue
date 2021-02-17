@@ -64,6 +64,28 @@
         </div>
         <div class="row">
             <div class="col-2 text-right">
+                <span><b>Code Source</b></span>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <span class="pl-3">Click <b><a style="color:red;" href="https://github.com/alexandru1985/task_manager">here</a></b> to see project on GitHub.</span>
+                </div>
+                <div class="row">
+                    <span class="pl-3"> Main file paths:</span>
+                </div>
+                <div class="row pl-3">
+                    <span>- app/Http/Controllers/API;</span>
+                </div>
+                <div class="row pl-3">
+                    <span>- app/Models;</span>
+                </div>
+                <div class="row pl-3">
+                    <span>- resources/js/components.</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 text-right">
                 <span><b>Note</b></span>
             </div>
             <div class="col-6">
