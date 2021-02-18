@@ -69,9 +69,6 @@
             <div class="col-6">
                 <span>Every time when you make a new login must import csv file again.</span>
             </div>
-            <div class="col-2">
-                Test1234
-            </div>
         </div>
     </div>
 </template>            
