@@ -94787,6 +94787,12 @@ var staticRenderFns = [
             _c("span", { staticClass: "pl-3" }, [
               _vm._v("- integrate APIs: Leaflet Map, Chart.js.")
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("- integrate APIs: Leaflet Map, Chart.js.")
+            ])
           ])
         ])
       ]),
