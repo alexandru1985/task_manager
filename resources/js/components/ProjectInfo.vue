@@ -70,7 +70,7 @@
                 <span>Every time when you make a new login must import csv file again.</span>
             </div>
             <div class="col-2">
-                Test
+                Test1234
             </div>
         </div>
     </div>
