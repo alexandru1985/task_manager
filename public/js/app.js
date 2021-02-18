@@ -94802,6 +94802,10 @@ var staticRenderFns = [
               "Every time when you make a new login must import csv file again."
             )
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-2" }, [
+          _vm._v("\n            Test\n        ")
         ])
       ])
     ])
