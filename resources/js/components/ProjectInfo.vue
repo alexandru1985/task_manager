@@ -60,9 +60,6 @@
                 <div class="row">
                     <span class="pl-3">- integrate APIs: Leaflet Map, Chart.js.</span>
                 </div>
-                <div class="row">
-                    <span class="pl-3">- integrate APIs: Leaflet Map, Chart.js.</span>
-                </div>
             </div>
         </div>
         <div class="row">
