@@ -8,6 +8,7 @@ if(Auth::check() === false) {
     DB::table('roles')->truncate();
     DB::table('tasks')->truncate();
     DB::table('user_tasks')->truncate();
+    DB::table('jobs')->truncate();
 }
 @endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
