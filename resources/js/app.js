@@ -56,6 +56,7 @@ import ImportCSV from './components/ImportCSV.vue';
 import ClientsMap from './components/ClientsMap.vue';
 import Reports from './components/Reports.vue';
 import ProjectInfo from './components/ProjectInfo.vue';
+import Mail from './components/Mail.vue';
 
 // Create routes
 import VueRouter from 'vue-router';
@@ -68,6 +69,7 @@ let routes = [
   { path: '/clients-map', component: ClientsMap},
   { path: '/reports', component: Reports},
   { path: '/project-info', component: ProjectInfo},
+  { path: '/mail', component: Mail},
 ]
 const router = new VueRouter({
   mode: 'history', 

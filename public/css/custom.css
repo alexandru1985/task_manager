@@ -8,11 +8,14 @@ body {
     padding-top: 10px;
 }
 .custom-h1-title {
-    text-align: center;
+    text-align: left;
     padding-bottom: 20px;
 }
 .content {
     margin-top: 20px;
+}
+.content-height {
+    height: 800px;
 }
 .custom-select{
     width: 100%;
@@ -88,3 +91,11 @@ body {
 html {
     font-size: 16px !important;
     }
+.col-2-width {
+    flex: 0 0 50%;
+    max-width: 190px;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}

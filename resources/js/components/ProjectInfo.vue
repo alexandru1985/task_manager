@@ -2,7 +2,7 @@
     <div>
         <h1 class="custom-h1-title">Project Info</h1>
         <div class="row">
-            <div class="col-2 text-right">
+            <div class=" col-2-width text-left">
                 <span><b>Description</b></span>
             </div>
             <div class="col-6">
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2 text-right">
+            <div class="col-2-width text-left">
                 <span><b>Technologies</b></span>
             </div>
             <div class="col-6">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2 text-right">
+            <div class="col-2-width text-left">
                 <span><b>Deployment</b></span>
             </div>
             <div class="col-6">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2 text-right">
+            <div class="col-2-width text-left">
                 <span><b>Developed Features</b></span>
             </div>
             <div class="col-6">
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2 text-right">
+            <div class="col-2-width text-left">
                 <span><b>Note</b></span>
             </div>
             <div class="col-6">

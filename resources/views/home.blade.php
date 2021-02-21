@@ -20,6 +20,9 @@
         <router-link  class="nav-link" to="/reports"><i class="fas fa-chart-bar" aria-hidden="true"></i></i><span class="a-text pl-1">Reports</span></router-link>
     </li>
     <li class="nav-item">
+        <router-link  class="nav-link" to="/mail"><i class="fas fa-envelope"></i><span class="a-text pl-1">Mail</span></router-link>
+    </li>
+    <li class="nav-item">
         <router-link  class="nav-link" to="/project-info"><i class="fas fa-info" aria-hidden="true"></i></i><span class="a-text pl-1">Project Info</span></router-link>
     </li>
     <li class="nav-item float-right">
