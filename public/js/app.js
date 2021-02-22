@@ -2159,6 +2159,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2412,6 +2414,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2528,6 +2532,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   // Create a new form instance
   data: function data() {
@@ -2597,6 +2605,8 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
 //
 //
 //
@@ -94540,13 +94550,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Clients Map")]),
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
     _vm._v(" "),
     this.$root.checkImportCSV > 0
       ? _c(
           "div",
-          { staticStyle: { height: "700px", width: "100%" } },
+          {
+            staticClass: "card-body",
+            staticStyle: { height: "700px", width: "100%" }
+          },
           [
             _vm.showMap
               ? _c(
@@ -94601,7 +94614,16 @@ var render = function() {
       : _c("div", [_c("default-message")], 1)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Clients Map")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -94623,7 +94645,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "card-body" }, [
     _c("p", [
       _vm._v("\n        First you must download a csv file from "),
       _c(
@@ -94671,10 +94693,10 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Import CSV")]),
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "d-flex flex-row" }, [
+    _c("div", { staticClass: "d-flex flex-row card-body" }, [
       _vm.showMessage == false
         ? _c("div", [
             _c(
@@ -94742,12 +94764,20 @@ var render = function() {
       _vm.showLoading ? _c("div", [_vm._v("Loading ...  ")]) : _vm._e(),
       _vm._v(" "),
       _vm.showLoading
-        ? _c("div", { staticClass: "pl-2" }, [_vm._m(0)])
+        ? _c("div", { staticClass: "pl-2" }, [_vm._m(1)])
         : _vm._e()
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Import CSV")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -94780,205 +94810,220 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Mail")]),
-      _vm._v(" "),
-      _c("notifications", {
-        attrs: { group: "message", classes: "add-task-notification" }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-4" }, [
-          _c(
-            "form",
-            {
-              attrs: { novalidate: "" },
-              on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.sendMail()
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "card-body" },
+      [
+        _c("notifications", {
+          attrs: { group: "message", classes: "add-task-notification" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-4" }, [
+            _c(
+              "form",
+              {
+                attrs: { novalidate: "" },
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.sendMail()
+                  }
                 }
-              }
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass: "form-group row",
-                  class: { "has-error": _vm.formMail.errors.has("to") }
-                },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-sm-2 col-form-label",
-                      attrs: { for: "to" }
-                    },
-                    [_vm._v("To")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-10" },
-                    [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formMail.to,
-                            expression: "formMail.to"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "email", name: "to", id: "to" },
-                        domProps: { value: _vm.formMail.to },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row",
+                    class: { "has-error": _vm.formMail.errors.has("to") }
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "col-sm-3 col-form-label",
+                        attrs: { for: "to" }
+                      },
+                      [_vm._v("To")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-9" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.formMail.to,
+                              expression: "formMail.to"
                             }
-                            _vm.$set(_vm.formMail, "to", $event.target.value)
-                          }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.formMail, field: "to" }
-                      })
-                    ],
-                    1
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "form-group row",
-                  class: { "has-error": _vm.formMail.errors.has("subject") }
-                },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-sm-2 col-form-label",
-                      attrs: { for: "subject" }
-                    },
-                    [_vm._v("Subject")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-10" },
-                    [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formMail.subject,
-                            expression: "formMail.subject"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { type: "text", name: "subject", id: "subject" },
-                        domProps: { value: _vm.formMail.subject },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "email", name: "to", id: "to" },
+                          domProps: { value: _vm.formMail.to },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.formMail, "to", $event.target.value)
                             }
-                            _vm.$set(
-                              _vm.formMail,
-                              "subject",
-                              $event.target.value
-                            )
                           }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.formMail, field: "subject" }
-                      })
-                    ],
-                    1
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "form-group row",
-                  class: { "has-error": _vm.formMail.errors.has("message") }
-                },
-                [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "col-sm-2 col-form-label",
-                      attrs: { for: "message" }
-                    },
-                    [_vm._v("Message")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-10" },
-                    [
-                      _c("textarea", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formMail.message,
-                            expression: "formMail.message"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: {
-                          rows: "4",
-                          cols: "50",
-                          name: "message",
-                          id: "message"
-                        },
-                        domProps: { value: _vm.formMail.message },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.formMail, field: "to" }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row",
+                    class: { "has-error": _vm.formMail.errors.has("subject") }
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "col-sm-3 col-form-label",
+                        attrs: { for: "subject" }
+                      },
+                      [_vm._v("Subject")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-9" },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.formMail.subject,
+                              expression: "formMail.subject"
                             }
-                            _vm.$set(
-                              _vm.formMail,
-                              "message",
-                              $event.target.value
-                            )
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            name: "subject",
+                            id: "subject"
+                          },
+                          domProps: { value: _vm.formMail.subject },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.formMail,
+                                "subject",
+                                $event.target.value
+                              )
+                            }
                           }
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("has-error", {
-                        attrs: { form: _vm.formMail, field: "message" }
-                      })
-                    ],
-                    1
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _vm._m(0)
-            ]
-          )
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.formMail, field: "subject" }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row",
+                    class: { "has-error": _vm.formMail.errors.has("message") }
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "col-sm-3 col-form-label",
+                        attrs: { for: "message" }
+                      },
+                      [_vm._v("Message")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-9" },
+                      [
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.formMail.message,
+                              expression: "formMail.message"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            rows: "4",
+                            cols: "50",
+                            name: "message",
+                            id: "message"
+                          },
+                          domProps: { value: _vm.formMail.message },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.formMail,
+                                "message",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.formMail, field: "message" }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(1)
+              ]
+            )
+          ])
         ])
-      ])
-    ],
-    1
-  )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Mail")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -95022,129 +95067,137 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Project Info")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: " col-2-width text-left" }, [
-          _c("span", [_c("b", [_vm._v("Description")])])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("span", [
-            _vm._v(
-              "This is a demo project with similar developed features on my professional experience."
-            )
-          ])
-        ])
+    return _c("div", { staticClass: "card" }, [
+      _c("div", { staticClass: "card-header" }, [
+        _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Project Info")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-2-width text-left" }, [
-          _c("span", [_c("b", [_vm._v("Technologies")])])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("span", [_vm._v("Laravel5.8, Vue, Bootstrap4.")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-2-width text-left" }, [
-          _c("span", [_c("b", [_vm._v("Deployment")])])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("span", [_vm._v("Heroku Cloud.")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-2-width text-left" }, [
-          _c("span", [_c("b", [_vm._v("Developed Features")])])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [_vm._v("- login system;")])
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: " col-2-width text-left" }, [
+            _c("span", [_c("b", [_vm._v("Description")])])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
+          _c("div", { staticClass: "col-6" }, [
+            _c("span", [
               _vm._v(
-                "- import csv file to database. In Tasks module rows will be displayed order by desc;"
+                "This is a demo project with similar developed features on my professional experience."
               )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v(
-                "- RESTful API on Tasks module, use Eloquent Relationships for queries;"
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v("- secure requests with Laravel Passport;")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [_vm._v("- forms validation;")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [_vm._v("- data pagination;")])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v("- filter data by assigned users;")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v(
-                "- export data in xls format, Excel. It will export all data, not just current page;"
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v(
-                "- optimisations looking CRUD actions, pagination and filter data;"
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v("- send mail, use Laravel Queue for delay sending mail;")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [
-              _vm._v("- integrate APIs: Leaflet Map, Chart.js.")
             ])
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-2-width text-left" }, [
-          _c("span", [_c("b", [_vm._v("Note")])])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-6" }, [
-          _c("span", [
-            _vm._v(
-              "Every time when you make a new login must import csv file again."
-            )
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-2-width text-left" }, [
+            _c("span", [_c("b", [_vm._v("Technologies")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("span", [_vm._v("Laravel5.8, Vue, Bootstrap4.")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-2-width text-left" }, [
+            _c("span", [_c("b", [_vm._v("Deployment")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("span", [_vm._v("Heroku Cloud.")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-2-width text-left" }, [
+            _c("span", [_c("b", [_vm._v("Developed Features")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [_vm._v("- login system;")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v(
+                  "- import csv file to database. In Tasks module rows will be displayed order by desc;"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v(
+                  "- RESTful API on Tasks module, use Eloquent Relationships for queries;"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- secure requests with Laravel Passport;")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- forms validation;")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- data pagination;")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- filter data by assigned users;")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v(
+                  "- export data in xls format, Excel. It will export all data, not just current page;"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v(
+                  "- optimisations looking CRUD actions, pagination and filter data;"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- send mail, use Laravel Queue for delay sending mail;")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("span", { staticClass: "pl-3" }, [
+                _vm._v("- integrate APIs: Leaflet Map, Chart.js.")
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-2-width text-left" }, [
+            _c("span", [_c("b", [_vm._v("Note")])])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("span", [
+              _vm._v(
+                "Every time when you make a new login must import csv file again."
+              )
+            ])
           ])
         ])
       ])
@@ -95172,18 +95225,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Reports")]),
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
     _vm._v(" "),
     this.$root.checkImportCSV > 0
-      ? _c("div", [
+      ? _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "row" }, [
             _c("div", { staticClass: "col-6" }, [_c("bar-chart")], 1),
             _vm._v(" "),
             _c(
               "div",
               { staticClass: "col-6" },
-              [_vm._m(0), _vm._v(" "), _c("doughnut-chart")],
+              [_vm._m(1), _vm._v(" "), _c("doughnut-chart")],
               1
             )
           ])
@@ -95192,6 +95245,14 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Reports")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -95232,12 +95293,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Tasks")]),
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
     _vm._v(" "),
     this.$root.checkImportCSV > 0
       ? _c(
           "div",
+          { staticClass: "card-body" },
           [
             _c("notifications", {
               attrs: { group: "add-task", classes: "add-task-notification" }
@@ -95373,7 +95435,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "container-fluid custom-container" }, [
               _c("table", { staticClass: "table table-striped" }, [
-                _vm._m(0),
+                _vm._m(1),
                 _vm._v(" "),
                 _vm.showRows
                   ? _c(
@@ -95467,9 +95529,9 @@ var render = function() {
                       }),
                       0
                     )
-                  : _c("caption", [_vm._m(1)]),
+                  : _c("caption", [_vm._m(2)]),
                 _vm._v(" "),
-                _vm.emptyData ? _c("caption", [_vm._m(2)]) : _vm._e()
+                _vm.emptyData ? _c("caption", [_vm._m(3)]) : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -95796,7 +95858,7 @@ var render = function() {
               [
                 _c("div", { staticClass: "modal-dialog" }, [
                   _c("div", { staticClass: "modal-content" }, [
-                    _vm._m(3),
+                    _vm._m(4),
                     _vm._v(" "),
                     _c(
                       "form",
@@ -95815,7 +95877,7 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _vm._m(4)
+                        _vm._m(5)
                       ]
                     )
                   ])
@@ -95829,6 +95891,14 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h1", { staticClass: "custom-h1-title" }, [_vm._v("Tasks")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

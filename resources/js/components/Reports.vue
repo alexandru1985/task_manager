@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <h1 class="custom-h1-title">Reports</h1>
-        <div v-if="this.$root.checkImportCSV > 0">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="custom-h1-title">Reports</h1>
+        </div>
+        <div class="card-body" v-if="this.$root.checkImportCSV > 0">
             <div class="row">
                 <div class="col-6">
                     <bar-chart></bar-chart>

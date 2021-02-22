@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="card-body">
         <p>
             First you must download a csv file from <a href="#" @click="downloadCSVFile()" style="color:red;"><b>here</b></a>. Then you click on <b>Import CSV</b> link form menu <br>
             above and import csv file. After that all links from menu above will be available.

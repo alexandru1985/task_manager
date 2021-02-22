@@ -1,6 +1,9 @@
 <template>
-    <div>
-        <h1 class="custom-h1-title">Project Info</h1>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="custom-h1-title">Project Info</h1>
+        </div>
+        <div class="card-body">
         <div class="row">
             <div class=" col-2-width text-left">
                 <span><b>Description</b></span>
@@ -72,6 +75,7 @@
             <div class="col-6">
                 <span>Every time when you make a new login must import csv file again.</span>
             </div>
+        </div>
         </div>
     </div>
 </template>            

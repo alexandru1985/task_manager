@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <h1 class="custom-h1-title">Import CSV</h1>
-        <div class="d-flex flex-row">   
+    <div class="card">
+        <div class ="card-header">
+            <h1 class="custom-h1-title">Import CSV</h1>
+        </div>
+        <div class="d-flex flex-row card-body">   
             <div v-if="showMessage==false">
                 <form @submit.prevent="saveCSVtoDb()">
                     <div class="form-group " :class="{ 'has-error': form.errors.has('file_csv','file_type') }">

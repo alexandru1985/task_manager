@@ -1,7 +1,9 @@
 <template>
-<div>
-    <h1 class="custom-h1-title">Clients Map</h1>
-    <div v-if="this.$root.checkImportCSV > 0" style="height: 700px; width: 100%;">
+<div class="card">
+    <div class="card-header">
+        <h1 class="custom-h1-title">Clients Map</h1>
+    </div>
+    <div class="card-body" v-if="this.$root.checkImportCSV > 0" style="height: 700px; width: 100%;">
         <l-map v-if="showMap" :zoom="zoom" :center="center" :options="mapOptions" style="height: 80%;">
             <l-tile-layer :url="url" :attribution="attribution" />
             <ul>

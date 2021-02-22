@@ -35,7 +35,7 @@ if(Auth::check() === false) {
         <div>
             @yield('nav-bar')
         </div>
-        <main class="py-4">
+        <main class="py-3">
             @yield('content')
         </main>
     </div>

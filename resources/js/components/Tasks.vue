@@ -1,7 +1,9 @@
 <template>
-<div>
+<div class="card">
+    <div class="card-header">
     <h1 class="custom-h1-title">Tasks</h1>
-    <div v-if="this.$root.checkImportCSV > 0">
+    </div>
+    <div class="card-body" v-if="this.$root.checkImportCSV > 0">
         <notifications group="add-task" classes="add-task-notification"/>
         <notifications group="update-task" classes="update-task-notification"/>
         <notifications group="delete-task" classes="delete-task-notification"/>
