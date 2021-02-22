@@ -95357,7 +95357,7 @@ var render = function() {
                               [
                                 _c("i", { staticClass: "fas fa-file-excel" }),
                                 _vm._v(
-                                  " Excel\n                                    "
+                                  " Excel\r\n                                    "
                                 )
                               ]
                             )
@@ -95444,7 +95444,7 @@ var render = function() {
                                 },
                                 [_c("i", { staticClass: "fas fa-edit" })]
                               ),
-                              _vm._v(" /\n                            "),
+                              _vm._v(" /\r\n                            "),
                               _c(
                                 "a",
                                 {
@@ -95811,7 +95811,7 @@ var render = function() {
                       [
                         _c("div", { staticClass: "modal-body" }, [
                           _vm._v(
-                            "\n                            Do you want to delete this task?\n                        "
+                            "\r\n                            Do you want to delete this task?\r\n                        "
                           )
                         ]),
                         _vm._v(" "),
