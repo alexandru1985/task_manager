@@ -95045,7 +95045,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-6" }, [
-          _c("span", [_vm._v("Laravel 5.8, Vue, Bootstrap 4.")])
+          _c("span", [_vm._v("Laravel5.8, Vue, Bootstrap4.")])
         ])
       ]),
       _vm._v(" "),
@@ -95092,7 +95092,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
-            _c("span", { staticClass: "pl-3" }, [_vm._v("- form validation;")])
+            _c("span", { staticClass: "pl-3" }, [_vm._v("- forms validation;")])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "row" }, [
@@ -95118,6 +95118,12 @@ var staticRenderFns = [
               _vm._v(
                 "- optimisations looking CRUD actions, pagination and filter data;"
               )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("span", { staticClass: "pl-3" }, [
+              _vm._v("- send mail, use Laravel Queue for delay sending mail;")
             ])
           ]),
           _vm._v(" "),

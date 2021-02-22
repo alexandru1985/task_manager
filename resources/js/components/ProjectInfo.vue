@@ -14,7 +14,7 @@
                 <span><b>Technologies</b></span>
             </div>
             <div class="col-6">
-                <span>Laravel 5.8, Vue, Bootstrap 4.</span>
+                <span>Laravel5.8, Vue, Bootstrap4.</span>
             </div>
         </div>
         <div class="row">
@@ -43,7 +43,7 @@
                     <span class="pl-3">- secure requests with Laravel Passport;</span>
                 </div>
                 <div class="row">
-                    <span class="pl-3">- form validation;</span>
+                    <span class="pl-3">- forms validation;</span>
                 </div>
                 <div class="row">
                     <span class="pl-3">- data pagination;</span>
@@ -56,6 +56,9 @@
                 </div>
                 <div class="row">
                     <span class="pl-3">- optimisations looking CRUD actions, pagination and filter data;</span>
+                </div>
+                <div class="row">
+                    <span class="pl-3">- send mail, use Laravel Queue for delay sending mail;</span>
                 </div>
                 <div class="row">
                     <span class="pl-3">- integrate APIs: Leaflet Map, Chart.js.</span>
