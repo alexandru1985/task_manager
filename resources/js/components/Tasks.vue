@@ -40,8 +40,7 @@
             </div>
         </div>
         <div class="container-fluid custom-container">
-            <table class="table table-striped">
-                <thead>
+            <table class="table">
                     <tr class="row">
                         <th class="col-2">Client</th>
                         <th class="col-2">Project</th>
@@ -50,7 +49,6 @@
                         <th class="col-2">User Roles Involved</th>
                         <th class="col-1">Actions</th>
                     </tr>
-                </thead>
                 <tbody v-if="showRows">
                     <tr class="row" v-for="task in tasks.data" :key="task.id" :item="task">
                         <td class="col-2">{{task.client.name}}</td>
@@ -104,29 +102,29 @@
                     <form @submit.prevent="editMode ? updateTask() : createTask()">
                         <div class="modal-body">
                             <div class="form-group row" :class="{ 'has-error': form.errors.has('client') }">
-                                <label for="client" class="col-sm-2 col-form-label">Client</label>
-                                <div class="col-sm-10">
+                                <label for="client" class="col-sm-3 col-form-label">Client</label>
+                                <div class="col-sm-9">
                                     <v-select v-model="form.client" label="name" :options="client" name="client" id="client" />
                                     <has-error :form="form" field="client"></has-error>
                                 </div>
                             </div>
                             <div class="form-group row" :class="{ 'has-error': form.errors.has('project') }">
-                                <label for="project" class="col-sm-2 col-form-label">Project</label>
-                                <div class="col-sm-10">
+                                <label for="project" class="col-sm-3 col-form-label">Project</label>
+                                <div class="col-sm-9">
                                     <v-select v-model="form.project" label="name" :options="project" id="project" />
                                     <has-error :form="form" field="project"></has-error>
                                 </div>
                             </div>
                             <div class="form-group row" :class="{ 'has-error': form.errors.has('name') }">
-                                <label for="task" class="col-sm-2 col-form-label">Task</label>
-                                <div class="col-sm-10">
+                                <label for="task" class="col-sm-3 col-form-label">Task</label>
+                                <div class="col-sm-9">
                                     <input type="text" v-model="form.name" class="form-control" id="task" />
                                     <has-error :form="form" field="name"></has-error>
                                 </div>
                             </div>
                             <div class="form-group row" :class="{ 'has-error': form.errors.has('users') }">
-                                <label for="assigned_users" class="col-sm-2 col-form-label">Assigned Users</label>
-                                <div class="col-sm-10">
+                                <label for="assigned_users" class="col-sm-3 col-form-label">Assigned Users</label>
+                                <div class="col-sm-9">
                                     <v-select v-model="form.users" multiple label="name" :options="users" id="assigned_users" />
                                     <has-error :form="form" field="users"></has-error>
                                 </div>

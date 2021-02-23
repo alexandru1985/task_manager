@@ -81,7 +81,6 @@ class LoginController extends Controller
         $xml = simplexml_load_file("http://www.geoplugin.net/xml.gp?ip=". $ip);
 
         $result = '';
-        $result .= 'IP: '.$xml->geoplugin_request . ', ';
         $result .= 'Country: '.$xml->geoplugin_countryName . ', ';
         $result .= 'City: '.$xml->geoplugin_city. ', ';
         $result .= 'Latitude: '.$xml->geoplugin_latitude. ', ';

@@ -2777,8 +2777,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -95434,7 +95432,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "container-fluid custom-container" }, [
-              _c("table", { staticClass: "table table-striped" }, [
+              _c("table", { staticClass: "table" }, [
                 _vm._m(1),
                 _vm._v(" "),
                 _vm.showRows
@@ -95624,7 +95622,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "col-sm-2 col-form-label",
+                                staticClass: "col-sm-3 col-form-label",
                                 attrs: { for: "client" }
                               },
                               [_vm._v("Client")]
@@ -95632,7 +95630,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-sm-10" },
+                              { staticClass: "col-sm-9" },
                               [
                                 _c("v-select", {
                                   attrs: {
@@ -95671,7 +95669,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "col-sm-2 col-form-label",
+                                staticClass: "col-sm-3 col-form-label",
                                 attrs: { for: "project" }
                               },
                               [_vm._v("Project")]
@@ -95679,7 +95677,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-sm-10" },
+                              { staticClass: "col-sm-9" },
                               [
                                 _c("v-select", {
                                   attrs: {
@@ -95715,7 +95713,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "col-sm-2 col-form-label",
+                                staticClass: "col-sm-3 col-form-label",
                                 attrs: { for: "task" }
                               },
                               [_vm._v("Task")]
@@ -95723,7 +95721,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-sm-10" },
+                              { staticClass: "col-sm-9" },
                               [
                                 _c("input", {
                                   directives: [
@@ -95770,7 +95768,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "col-sm-2 col-form-label",
+                                staticClass: "col-sm-3 col-form-label",
                                 attrs: { for: "assigned_users" }
                               },
                               [_vm._v("Assigned Users")]
@@ -95778,7 +95776,7 @@ var render = function() {
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "col-sm-10" },
+                              { staticClass: "col-sm-9" },
                               [
                                 _c("v-select", {
                                   attrs: {
@@ -95903,20 +95901,18 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", { staticClass: "row" }, [
-        _c("th", { staticClass: "col-2" }, [_vm._v("Client")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "col-2" }, [_vm._v("Project")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "col-3" }, [_vm._v("Task")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "col-2" }, [_vm._v("Assigned Users")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "col-2" }, [_vm._v("User Roles Involved")]),
-        _vm._v(" "),
-        _c("th", { staticClass: "col-1" }, [_vm._v("Actions")])
-      ])
+    return _c("tr", { staticClass: "row" }, [
+      _c("th", { staticClass: "col-2" }, [_vm._v("Client")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "col-2" }, [_vm._v("Project")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "col-3" }, [_vm._v("Task")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "col-2" }, [_vm._v("Assigned Users")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "col-2" }, [_vm._v("User Roles Involved")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "col-1" }, [_vm._v("Actions")])
     ])
   },
   function() {

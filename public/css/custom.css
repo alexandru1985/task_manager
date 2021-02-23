@@ -1,5 +1,6 @@
 body {
     font-size: 1.02rem;
+    background-color: #f2f3f7;
 }
 .custom-container {
     margin-top:20px;
@@ -10,7 +11,7 @@ body {
 .custom-h1-title {
     text-align: left;
     margin-bottom: 0.1rem;
-    font-size: 32px;
+    font-size: 30px;
 }
 .content {
     margin-top: 20px;
@@ -63,10 +64,10 @@ body {
 }
 .add-task-notification, .update-task-notification {
     font-size: 13px;
-    padding: 8px;
-    margin-top: 77px;
-    margin-right: 16px;
-    margin-left: 5.5px;
+    padding: 9.7px;
+    margin-top: 77.2px;
+    margin-right: 35.4px;
+    margin-left: 0px;
     border-radius: 2.5px;
     color: #fff;
     background-color: #5a7fbf !important;
@@ -74,14 +75,17 @@ body {
 }
 .delete-task-notification {
     font-size: 13px;
-    padding: 8px;
-    margin-top: 77px;
-    margin-right: 16px;
-    margin-left: 5.5px;
+    padding: 9.7px;
+    margin-top: 77.2px;
+    margin-right: 35.4px;
+    margin-left: 0px;
     border-radius: 2.5px;
     color: #fff;
     background: #e54d42 !important;
     border-left: 5px solid #b82e24 !important;
+}
+.vue-notification-group {
+    width: 315px !important;
 }
 #file_csv {
     width: 250px; 
@@ -108,4 +112,17 @@ html {
 .navbar {
     font-size: 17.5px;
     border-radius: 2.5px;
+    box-sizing: border-box;
+}
+.card-header {
+    background-color: #fff;
+    
+}
+.card {
+    border: 1px solid #ebedf3;
+    box-shadow: 1.2px 1.2px 1.6px 1.6px #ebedf3;
+}
+
+thead {
+    border-color: initial !important;
 }
