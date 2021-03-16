@@ -2841,7 +2841,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     getResults: function getResults() {
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       this.page = page;
-      this.loadTasks(100, this.filterListUsers, page);
+      this.loadTasks(0, this.filterListUsers, page);
     },
     newModal: function newModal() {
       this.fillSelects();

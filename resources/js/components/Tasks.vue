@@ -239,7 +239,7 @@ export default {
         // Method to GET results from a Laravel endpoint
         getResults(page = 1) {
             this.page = page;
-            this.loadTasks(100, this.filterListUsers, page);
+            this.loadTasks(0, this.filterListUsers, page);
         },
         newModal() {
             this.fillSelects();
