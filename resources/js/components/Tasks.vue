@@ -285,6 +285,8 @@ export default {
         async createTask() {
             await this.form.post('api/tasks').then(() => {
                 $('.modal-header button')[0].click();
+                this.filterListUsers = [];
+                this.formFilter.listUsers=[];
                 this.refreshData();
             });
             this.notificationType = 1;

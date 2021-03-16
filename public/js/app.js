@@ -2915,6 +2915,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.next = 2;
                 return _this2.form.post('api/tasks').then(function () {
                   $('.modal-header button')[0].click();
+                  _this2.filterListUsers = [];
+                  _this2.formFilter.listUsers = [];
 
                   _this2.refreshData();
                 });
