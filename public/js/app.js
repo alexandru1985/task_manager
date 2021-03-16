@@ -2792,7 +2792,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       showRows: false,
       notificationType: 0,
       emptyData: false,
-      defaultObject: true,
       // Create a new form instance
       form: new Form({
         id: '',
@@ -2894,7 +2893,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 3:
-                // Get notification after the tasks are loaded on RefreshData event
+                // Get notification after the tasks are loaded on refreshData 
                 _this.getNotificationType();
 
               case 4:
@@ -2916,7 +2915,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.next = 2;
                 return _this2.form.post('api/tasks').then(function () {
                   $('.modal-header button')[0].click();
-                  vueEvent.$emit('RefreshData');
+
+                  _this2.refreshData();
                 });
 
               case 2:
@@ -2941,7 +2941,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context3.next = 2;
                 return _this3.form.put('api/tasks/' + _this3.form.id).then(function () {
                   $('.modal-header button')[0].click();
-                  vueEvent.$emit('RefreshData');
+
+                  _this3.refreshData();
                 });
 
               case 2:
@@ -2978,7 +2979,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 $('.modal-header button')[1].click();
-                vueEvent.$emit('RefreshData');
+
+                _this4.refreshData();
               });
 
             case 2:
@@ -3012,7 +3014,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   }), _defineProperty(_methods, "filterByUsers", function filterByUsers() {
     this.showRows = false;
     this.emptyData = false;
-    this.defaultObject = false;
     this.page = 1;
     var filterListUsers = [];
     var selectedUsers = this.formFilter.listUsers;
@@ -3086,17 +3087,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     this.notificationType = 0;
+  }), _defineProperty(_methods, "refreshData", function refreshData() {
+    this.loadTasks(0, this.filterListUsers, this.page);
   }), _methods),
   created: function created() {
-    var _this8 = this;
-
-    if (this.defaultObject) {
-      this.loadTasks(150, this.filterListUsers, this.page);
-    }
-
-    vueEvent.$on('RefreshData', function () {
-      _this8.loadTasks(0, _this8.filterListUsers, _this8.page);
-    });
+    this.loadTasks(150, this.filterListUsers, this.page);
   },
   mounted: function mounted() {}
 });

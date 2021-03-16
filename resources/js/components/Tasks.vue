@@ -186,7 +186,6 @@ export default {
             showRows: false,
             notificationType: 0,
             emptyData: false,
-            defaultObject: true,
 
             // Create a new form instance
             form: new Form({
@@ -280,20 +279,20 @@ export default {
                     this.emptyData = true;
                 }
             });
-            // Get notification after the tasks are loaded on RefreshData event
+            // Get notification after the tasks are loaded on refreshData 
             this.getNotificationType();
         },
         async createTask() {
-            await this.form.post('api/tasks').then(function() {
+            await this.form.post('api/tasks').then(() => {
                 $('.modal-header button')[0].click();
-                vueEvent.$emit('RefreshData');
+                this.refreshData();
             });
             this.notificationType = 1;
         },
         async updateTask() {
             await this.form.put('api/tasks/' + this.form.id).then(() => {
                 $('.modal-header button')[0].click();
-                vueEvent.$emit('RefreshData');
+                this.refreshData();
             });
             this.notificationType = 2;
         },
@@ -311,7 +310,7 @@ export default {
                     this.page = 1;
                 }
                 $('.modal-header button')[1].click();
-                vueEvent.$emit('RefreshData');
+                this.refreshData();
             })
             this.notificationType = 3;
         },
@@ -326,7 +325,6 @@ export default {
         filterByUsers() {
             this.showRows = false;
             this.emptyData = false;
-            this.defaultObject = false;
             this.page = 1;
             let filterListUsers = [];
             let selectedUsers = this.formFilter.listUsers;
@@ -378,15 +376,12 @@ export default {
             }
             this.notificationType = 0;
         },
+        refreshData(){
+            this.loadTasks(0, this.filterListUsers, this.page);
+        }
     },
     created() {
-        if(this.defaultObject) {
-            this.loadTasks(150, this.filterListUsers, this.page);
-        }
-        vueEvent.$on('RefreshData', () => {
-            this.loadTasks(0, this.filterListUsers, this.page);
-        });
-
+        this.loadTasks(150, this.filterListUsers, this.page);
     },
     mounted() {
 
