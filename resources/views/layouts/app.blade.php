@@ -18,7 +18,7 @@ if(Auth::check() === false) {
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Task Manager</title>
+    <title>TaskManager</title>
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">

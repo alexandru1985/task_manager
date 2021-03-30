@@ -5,7 +5,7 @@
   <!-- Links -->
   <ul class="nav navbar-nav" style="visibility: visible;">
     <li class="nav-item">
-      <a class="nav-link active">Task Manager</a>
+      <a class="nav-link active">TaskManager</a>
     </li>
     <li class="nav-item">
         <router-link  class="nav-link" to="/tasks"><i class="fas fa-list"></i><span class="a-text pl-1">Tasks</span></router-link>
