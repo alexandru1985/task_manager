@@ -95408,7 +95408,7 @@ var render = function() {
                                   data: _vm.json_data,
                                   fields: _vm.json_fields,
                                   worksheet: "My Worksheet",
-                                  name: "tasks_cp.xls"
+                                  name: "tasks.xls"
                                 }
                               },
                               [
