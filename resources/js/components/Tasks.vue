@@ -30,7 +30,7 @@
                                         :data   = "json_data"
                                         :fields = "json_fields"
                                         worksheet = "My Worksheet"
-                                        name    = "tasks_cp.xls"><i class="fas fa-file-excel"></i> Excel
+                                        name    = "tasks.xls"><i class="fas fa-file-excel"></i> Excel
                                     </export-excel>  
                                 </div>
                             </div>
