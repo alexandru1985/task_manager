@@ -94315,14 +94315,14 @@ __webpack_require__.r(__webpack_exports__);
             if (this.title != null) {
                 xlsData += this.parseExtraData(
                     this.title,
-                    '<tr><th colspan="' + colspan + '">${data}</th></tr>'
+                    '<tr><th style="text-align:left" colspan="' + colspan + '">${data}</th></tr>'
                 );
             }
 
             //Fields
             xlsData += "<tr>";
             for (let key in data[0]) {
-                xlsData += "<th>" + key + "</th>";
+                xlsData += "<th style='text-align:left'>" + key + "</th>";
             }
             xlsData += "</tr>";
             xlsData += "</thead>";
