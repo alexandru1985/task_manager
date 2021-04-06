@@ -67,7 +67,7 @@ body {
     padding: 9.7px;
     margin-top: 77.2px;
     margin-right: 35.4px;
-    margin-left: 0px;
+    margin-left: 24px;
     border-radius: 2.5px;
     color: #fff;
     background-color: #5a7fbf !important;
@@ -78,7 +78,7 @@ body {
     padding: 9.7px;
     margin-top: 77.2px;
     margin-right: 35.4px;
-    margin-left: 0px;
+    margin-left: 24px;
     border-radius: 2.5px;
     color: #fff;
     background: #e54d42 !important;
@@ -135,4 +135,9 @@ thead {
 }
 #export_pdf{
     padding-right: 24.8px;
+}
+
+.modal-open {
+    overflow: visible;
+    padding-right: 0px !important;
 }
