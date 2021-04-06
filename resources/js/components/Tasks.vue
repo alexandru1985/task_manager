@@ -439,7 +439,7 @@ export default {
                     page: all
                 }
             }).then(response => this.pdf_data = response.data);
-            var doc = new jsPDF();;
+            var doc = new jsPDF('p', 'pt', 'a4');
             doc.autoTable({
             head: [['Client', 'Project', 'Task', 'Assigned Users', 'User Roles Involved']],
             body: this.dataToPDF(this.pdf_data),
