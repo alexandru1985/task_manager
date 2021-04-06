@@ -11,7 +11,7 @@
         <router-link  class="nav-link" to="/tasks"><i class="fas fa-list"></i><span class="a-text pl-1">Tasks</span></router-link>
     </li>
     <li class="nav-item">
-        <router-link  class="nav-link" to="/import-csv"><i class="fas fa-file-download"></i><span class="a-text pl-1">Import CSV</span></router-link>
+        <router-link  class="nav-link" to="/import-csv"><i class="fas fa-file-upload"></i><span class="a-text pl-1">Import CSV</span></router-link>
     </li>
     <li class="nav-item">
         <router-link  class="nav-link" to="/clients-map"><i class="fas fa-map-marker-alt"></i><span class="a-text pl-1">Clients Map</span></router-link>

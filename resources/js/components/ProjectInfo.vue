@@ -55,7 +55,7 @@
                     <span class="pl-3">- filter data by assigned users;</span>
                 </div>
                 <div class="row">
-                    <span class="pl-3">- export data in xls format, Excel. It will export all data, not just current page;</span>
+                    <span class="pl-3">- export data in xls, pdf, csv formats. It will export all data, not just current page;</span>
                 </div>
                 <div class="row">
                     <span class="pl-3">- optimisations looking CRUD actions, pagination and filter data;</span>

@@ -126,3 +126,13 @@ html {
 thead {
     border-color: initial !important;
 }
+.custom-dropdown-item {
+    cursor: pointer;
+    font-size: 14px !important;
+}
+#export_excel{
+    padding-right: 26px;
+}
+#export_pdf{
+    padding-right: 24.8px;
+}

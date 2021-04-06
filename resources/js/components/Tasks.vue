@@ -22,25 +22,40 @@
                             </form>
                         </div>
                         <div>
-                            <div class="box-footer clearfix">
-                                <div class="btn-group">           
-                                    <export-excel
-                                        class   = "btn btn-primary"
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button id="export_excel" class="dropdown-item custom-dropdown-item" type="button">
+                                    <export-excel 
                                         :before-generate="()=>{return exportExcelAll('all')}"
                                         :data   = "json_data"
                                         :fields = "json_fields"
                                         worksheet = "My Worksheet"
-                                        name    = "tasks.xls"><i class="fas fa-file-excel"></i> Excel
-                                    </export-excel>  
-                                </div>
+                                        name = "tasks.xls"><i class="fas fa-file-excel"></i> XLS
+                                    </export-excel> 
+                                </button>
+                                <button id="export_pdf" class="dropdown-item custom-dropdown-item" type="button" @click="generatePDF('all')"><i class="fas fa-file-pdf"></i> PDF</button>
+                                    <button  class="dropdown-item custom-dropdown-item" type="button">
+                                    <export-excel
+                                        :before-generate="()=>{return exportExcelAll('all')}"
+                                        :data   = "json_data"
+                                        :fields = "json_fields"
+                                        worksheet = "My Worksheet"
+                                        type = "csv"
+                                        name = "tasks.csv"><i class="fas fa-file-csv"></i> CSV
+                                    </export-excel> 
+                                </button>
+                            </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid custom-container">
-            <table class="table">
+            <table class="table" id="testPDF">
                     <tr class="row">
                         <th class="col-2">Client</th>
                         <th class="col-2">Project</th>
@@ -171,6 +186,8 @@
 </div>
 </template>
 <script>
+import { jsPDF } from "jspdf";
+import 'jspdf-autotable';
 export default {
     data() {
         return {
@@ -232,6 +249,7 @@ export default {
                     'value': 'utf-8'
                 }]
             ],
+            pdf_data: null
         }
     },
     methods: {
@@ -273,6 +291,7 @@ export default {
             }).then(response => {
                 this.tasks = response.data;
                 this.json_data = this.tasks.data;
+                this.pdf_data = this.tasks.data;
                 this.showRows = true;
                 this.emptyData = false;
                 if(this.tasks.data.length == 0) {
@@ -380,6 +399,56 @@ export default {
         },
         refreshData(){
             this.loadTasks(0, this.filterListUsers, this.page);
+        },
+        dataToPDF(tasks) {
+            var arr = [];
+            var tasks = tasks;
+            var clientName = '';
+            var projectName = '';
+            var taskName = '';
+            var users = '';  
+            for (let i = 0; i < tasks.length; i++) {
+                clientName = tasks[i]['client']['name'];
+                projectName = tasks[i]['project']['name'];
+                taskName = tasks[i]['name'];
+                var users = function () {
+                            users = tasks[i]['users'];
+                            var arr = [];
+                            users.forEach((user) => {
+                                arr.push(user['name']);
+                            });
+                         return arr.join(', ');
+                        }
+                var userRoles = function () {
+                        users = tasks[i]['users'];
+                        console.log(userRoles);
+                        var arr = [];
+                        users.forEach((users) => {
+                            arr.push(users['pivot']['user_role']);
+                        });
+                        return arr.join(', ');
+                    }        
+                arr.push([clientName, projectName, taskName, users(), userRoles()]);
+            }
+            return arr;
+        },
+        async generatePDF(all){
+            await axios.get('api/tasks', {
+                params: {
+                    filterListUsers: this.filterListUsers,
+                    page: all
+                }
+            }).then(response => this.pdf_data = response.data);
+            var doc = new jsPDF();;
+            doc.autoTable({
+            head: [['Client', 'Project', 'Task', 'Assigned Users', 'User Roles Involved']],
+            body: this.dataToPDF(this.pdf_data),
+                headStyles: {
+                    fillColor: '#192841',
+                    textColor: '#ffffff',
+                },
+            })
+            doc.save('tasks.pdf')
         }
     },
     created() {
