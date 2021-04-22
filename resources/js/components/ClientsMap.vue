@@ -3,7 +3,7 @@
     <div class="card-header">
         <h1 class="custom-h1-title">Clients Map</h1>
     </div>
-    <div class="card-body" v-if="this.$root.checkImportCSV > 0" style="height: 700px; width: 100%;">
+    <div class="card-body custom-map" v-if="this.$root.checkImportCSV > 0">
         <l-map v-if="showMap" :zoom="zoom" :center="center" :options="mapOptions" style="height: 80%;">
             <l-tile-layer :url="url" :attribution="attribution" />
             <ul>
@@ -61,9 +61,14 @@ export default {
     methods: {
     },
     created() {
+        var window_width = $(window).width();
+        if(window_width < 400) {
+            this.zoom = 2;
+        } 
         axios.get('api/get-clients')
             .then(r => r["data"])
             .then(data => {
+                var window_width = $(window).width();
                     var arr = [];
                     data.forEach((client, index) => {
                         arr[index] = {
@@ -71,7 +76,6 @@ export default {
                             long: client.longitude,
                             name: client.name
                         }
-
                     });
                     this.clients = arr;
                 }

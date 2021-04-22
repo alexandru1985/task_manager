@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('nav-bar')
-<nav class="navbar bg-primary navbar-dark navbar-expand-sm">
-
+<nav class="navbar bg-primary navbar-dark navbar-expand-sm  navbar-collapse">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
   <!-- Links -->
   <ul class="nav navbar-nav" style="visibility: visible;">
     <li class="nav-item">
@@ -60,6 +63,7 @@
                     </ul>
             </li>
   </ul>
+</div>
 </nav>
 @endsection
 @section('content')

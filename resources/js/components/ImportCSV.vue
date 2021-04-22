@@ -11,7 +11,7 @@
                     <input type="file" id="file_csv" @change="getCSVFile()"><br>
                     <has-error :form="form" field="file_csv"></has-error>
                     <has-error :form="form" field="file_type"></has-error>
-                    <button class="btn btn-primary" type="submit">Import</button>
+                    <button class="btn btn-primary col-lg-3 col-sm-12" type="submit" style="margin-top:3px;">Import</button>
                     </div>
                 </form>
             </div>

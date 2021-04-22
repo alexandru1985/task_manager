@@ -160,6 +160,9 @@ thead {
     padding-left:60px; 
     padding-top:8px;
 }
+.custom-map {
+    height: 700px; width: 100%;
+}
 
 @media only screen and (max-width: 600px) {
     .p-doughnut-sm {
@@ -179,5 +182,8 @@ thead {
     
         width: 1000px;
         padding-left: 3px;
+    }
+    .custom-map {
+        height: 400px; width: 100%;
     }
 }
