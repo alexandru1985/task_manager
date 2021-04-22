@@ -6,7 +6,7 @@
 	<div class="card-body">
 	<notifications group="message" classes="add-task-notification"/>
 	<div class="row">
-		<div class="col-4">
+		<div class="col-lg-4 col-sm-12">
 			<form @submit.prevent="sendMail()" novalidate>
 				<div class="form-group row" :class="{ 'has-error': formMail.errors.has('to') }">
 					<label for="to" class="col-sm-3 col-form-label">To</label>
@@ -30,8 +30,8 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<div class="col-sm-10">
-								<button type="submit" class="btn btn-primary">Send</button>
+							<div class="col-sm-12">
+								<button type="submit" class="btn btn-primary col-sm-12">Send</button>
 							</div>
 						</div>
 					</form>

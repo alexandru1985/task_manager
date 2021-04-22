@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body custom-card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -40,7 +40,7 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary col-lg-3 col-sm-12">
                                     {{ __('Login') }}
                                 </button>
                                 <!-- <a  href="{{url('/login/facebook')}}" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Login with Facebook </a> -->

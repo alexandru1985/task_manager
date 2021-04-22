@@ -8,10 +8,10 @@
         <notifications group="update-task" classes="update-task-notification"/>
         <notifications group="delete-task" classes="delete-task-notification"/>
         <div class="row">
-            <div class="col-6">
-                <button type="button" class="btn btn-primary" @click="newModal()" data-toggle="modal" data-target="#task-form" data-backdrop="static" data-keyboard="false">Add Task <i class="fas fa-plus"></i></button>
+            <div class="col-lg-6 col-sm-12 custom-add-task-sm">
+                <button type="button" class="btn btn-primary col-lg-2 col-sm-12 custom-add-task-sm" @click="newModal()" data-toggle="modal" data-target="#task-form" data-backdrop="static" data-keyboard="false">Add Task <i class="fas fa-plus"></i></button>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
                     <div class="d-flex flex-row float-right">
                         <div @click="getListUsers()">
@@ -54,8 +54,8 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid custom-container">
-            <table class="table" id="testPDF">
+        <div class="container-fluid custom-table">
+            <table class="table custom-table-sm">
                     <tr class="row">
                         <th class="col-2">Client</th>
                         <th class="col-2">Project</th>
@@ -147,7 +147,7 @@
                         </div>
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                            <div class="btn-group col-4 pr-1" role="group">
+                            <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-primary btn-left" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary" v-if="editMode">Update</button>
                                 <button type="submit" class="btn btn-primary" v-else>Save</button>
@@ -172,7 +172,7 @@
                         </div>
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                            <div class="btn-group col-4 pr-1" role="group">
+                            <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-primary btn-left" data-dismiss="modal">No</button>
                                 <button type="submit" class="btn btn-primary">Yes</button>
                             </div>

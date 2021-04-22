@@ -8,7 +8,7 @@
             <div class=" col-2-width text-left">
                 <span><b>Description</b></span>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <span>This is a demo project with similar developed features on my professional experience.</span>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="col-2-width text-left">
                 <span><b>Technologies</b></span>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <span>Laravel5.8, Vue, Bootstrap4.</span>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-2-width text-left">
                 <span><b>Deployment</b></span>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <span>Heroku Cloud.</span>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div class="col-2-width text-left">
                 <span><b>Developed Features</b></span>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="row">
                     <span class="pl-3">- login system;</span>
                 </div>
@@ -72,7 +72,7 @@
             <div class="col-2-width text-left">
                 <span><b>Note</b></span>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-sm-12">
                 <span>Every time when you make a new login must import csv file again.</span>
             </div>
         </div>

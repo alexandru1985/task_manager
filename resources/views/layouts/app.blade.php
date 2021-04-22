@@ -31,11 +31,11 @@ if(Auth::check() === false) {
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <div id="app" class="container-fluid content-height">
+    <div id="app" class="container-fluid custom-container">
         <div>
             @yield('nav-bar')
         </div>
-        <main class="py-3">
+        <main class="custom-content">
             @yield('content')
         </main>
     </div>
