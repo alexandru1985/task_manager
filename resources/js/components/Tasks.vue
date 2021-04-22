@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid custom-table table-responsive-sm">
+        <div class="container-fluid custom-table table-responsive-lg">
             <table class="table custom-table-sm">
                     <tr class="row">
                         <th class="col-2">Client</th>

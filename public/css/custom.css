@@ -176,9 +176,8 @@ thead {
         min-width: 205px;
 }
     .custom-table-sm {
-        display: block;
-        overflow-x:auto;
-        width: 700px;
+    
+        width: 1000px;
         padding-left: 3px;
     }
 }
