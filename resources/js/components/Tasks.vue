@@ -9,7 +9,7 @@
         <notifications group="delete-task" classes="delete-task-notification"/>
         <div class="row">
             <div class="col-lg-6 col-sm-12 custom-add-task-sm">
-                <button type="button" class="btn btn-primary col-lg-2 col-sm-12 custom-add-task-sm" @click="newModal()" data-toggle="modal" data-target="#task-form" data-backdrop="static" data-keyboard="false">Add Task <i class="fas fa-plus"></i></button>
+                <button type="button" class="btn btn-primary col-md-2 col-sm-12 custom-add-task-sm" @click="newModal()" data-toggle="modal" data-target="#task-form" data-backdrop="static" data-keyboard="false">Add Task <i class="fas fa-plus"></i></button>
             </div>
             <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
