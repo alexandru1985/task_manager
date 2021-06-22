@@ -66,8 +66,8 @@ body {
 .add-task-notification, .update-task-notification {
     font-size: 13px;
     padding: 9.7px;
-    margin-top: 77.2px;
-    margin-right: 35.4px;
+    margin-top: 71.2px;
+    margin-right: 25.4px;
     margin-left: 24px;
     border-radius: 2.5px;
     color: #fff;
@@ -77,8 +77,8 @@ body {
 .delete-task-notification {
     font-size: 13px;
     padding: 9.7px;
-    margin-top: 77.2px;
-    margin-right: 35.4px;
+    margin-top: 71.2px;
+    margin-right: 25.4px;
     margin-left: 24px;
     border-radius: 2.5px;
     color: #fff;
@@ -185,5 +185,33 @@ thead {
     }
     .custom-map {
         height: 400px; width: 100%;
+    }
+    .add-task-notification, .update-task-notification {
+        font-size: 13px;
+        padding: 9.7px;
+        border-radius: 2.5px;
+        color: #fff;
+        background-color: #5a7fbf !important;
+        border-left: 5px solid #324f81 !important;
+    }
+    .delete-task-notification {
+        font-size: 13px;
+        padding: 9.7px;
+        border-radius: 2.5px;
+        color: #fff;
+        background: #e54d42 !important;
+        border-left: 5px solid #b82e24 !important;
+    }
+    .vue-notification-group {
+        top: 0px !important;
+        right: 0px !important;
+        width: 357px !important; 
+    }
+    .loading {
+        margin-left: -28px;
+        margin-top: 31px;  
+    }
+    .spinner-border {
+        margin-left: 24px;
     }
 }
