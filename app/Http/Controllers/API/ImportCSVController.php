@@ -30,7 +30,7 @@ class ImportCSVController extends Controller {
             $str = $request->file_csv;
             $initialData = array_map('str_getcsv', explode("\n", $str));
             $data = array_slice($initialData, 1);
-
+          
             // Procesing CSV file and save data in database tables
             foreach ($data as $key => $rows) {
                 if (is_string($rows[0])) {
@@ -64,6 +64,7 @@ class ImportCSVController extends Controller {
                         $roles->save();
                     }
                 }
+              
                 if (is_string($rows[5])) {
                     $users = explode(",", $rows[5]);
                     $roles = explode(",", $rows[6]);
@@ -83,7 +84,7 @@ class ImportCSVController extends Controller {
                     }
                 }
             }
-            return response()->json(['message' => 'The csv file is saved to database'], 200);
+            return response()->json(['message' => 'The csv file is saved to database'], 201);
         }
     }
 

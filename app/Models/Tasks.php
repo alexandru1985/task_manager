@@ -44,7 +44,7 @@ class Tasks extends Model
 
     public static function getUserRole(int $userId){
         $user = Users::with('role')->whereIn('id', [$userId])->get();
-        return $user[0]->role->name;
+        return isset($user[0]->role->name) ? $user[0]->role->name : '';
     }
 
 }
