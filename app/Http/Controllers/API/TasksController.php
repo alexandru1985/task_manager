@@ -121,8 +121,4 @@ class TasksController extends Controller {
     public function getUsers() {
         return $users = Users::where('role_id', '!=', null)->get(['id', 'name']);
     }
-    public function test() {
-        return "1";
-    }
-
 }
