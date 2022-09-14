@@ -36,8 +36,8 @@ export default {
         };
     },
     methods: {
-                async deleteTask() {
-            await this.form.delete('api/tasks/' + this.taskId).then(() => {
+            async deleteTask() {
+                await this.form.delete('api/tasks/' + this.taskId).then(() => {
                 $('.modal-header button')[1].click();
                 vueEvent.$emit('RefreshData');
             })

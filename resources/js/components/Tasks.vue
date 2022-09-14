@@ -254,7 +254,6 @@ export default {
         }
     },
     methods: {
-
         // Method to GET results from a Laravel endpoint
         getResults(page = 1) {
             this.page = page;
