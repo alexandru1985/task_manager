@@ -14,11 +14,13 @@ use DB;
 
 class TasksController extends Controller {
 
-    public function __construct() {
+    public function __construct() 
+    {
         $this->middleware('auth:api');
     }
 
-    public function index(Request $request) {
+    public function index(Request $request) 
+    {
         $filterListUsers = $request->filterListUsers;
         $tasks = Tasks::with('users', 'project', 'client')->whereHas('users', function ($q) use ($filterListUsers) {
                     if (!empty($filterListUsers)) {
@@ -33,7 +35,8 @@ class TasksController extends Controller {
         }
     }
 
-    public function store(Request $request) {
+    public function store(Request $request) 
+    {
         $array = Tasks::validation();
 
         $validator = Validator::make($request->all(), $array['rules'], $array['messages']);
@@ -50,9 +53,10 @@ class TasksController extends Controller {
             foreach ($request->users as $user) {
                 //collect all the ids
                 $pivot[$user['id']] = [
-                'user_id' => $user['id'],
-                'task_id' => $tasks->id,
-                'user_role' => Tasks::getUserRole($user['id'])];
+                    'user_id' => $user['id'],
+                    'task_id' => $tasks->id,
+                    'user_role' => Tasks::getUserRole($user['id'])
+                ];
             }
 
             $tasks->users()->attach($pivot);
@@ -61,7 +65,8 @@ class TasksController extends Controller {
         }
     }
 
-    public function update($id, Request $request) {
+    public function update($id, Request $request) 
+    {
         $array = Tasks::validation();
 
         $validator = Validator::make($request->all(), $array['rules'], $array['messages']);
@@ -92,33 +97,39 @@ class TasksController extends Controller {
         }
     }
 
-    public function destroy($id, Request $request) {
+    public function destroy($id, Request $request) 
+    {
         $tasks = Tasks::findOrFail($id);
+
         if ($tasks->delete()) {
             $tasks->users()->detach();
+
             if(!empty($request->filterListUsers)) {
                 $totalTasks = DB::table('users')
                 ->select('users.name', DB::raw('count(user_tasks.task_id) as tasks'))
                 ->join('user_tasks', 'users.id', '=', 'user_tasks.user_id')->whereIn('user_tasks.user_id', $request->filterListUsers)
                 ->count();
-            }
-            else {
+            } else {
                 $totalTasks = DB::table('tasks')->count();
             }
+
             $paginate = $totalTasks / 7;
             return response()->json(['message' => 'Task deleted', 'paginate'=> $paginate], 200);
         }
     }
 
-    public function getClients() {
+    public function getClients() 
+    {
         return $clients = Clients::all();
     }
 
-    public function getProjects() {
+    public function getProjects() 
+    {
         return $projects = Projects::all();
     }
 
-    public function getUsers() {
+    public function getUsers() 
+    {
         return $users = Users::where('role_id', '!=', null)->get(['id', 'name']);
     }
 }

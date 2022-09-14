@@ -17,7 +17,7 @@
                 <span><b>Technologies</b></span>
             </div>
             <div class="col-lg-6 col-sm-12">
-                <span>Laravel5.8, Vue, Bootstrap4.</span>
+                <span>Laravel8, Vue, Bootstrap4.</span>
             </div>
         </div>
         <div class="row">

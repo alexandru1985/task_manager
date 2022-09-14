@@ -13,5 +13,4 @@ class Users extends Model
     {
         return $this->hasOne('App\Models\Roles','id','role_id');
     }
-
 }

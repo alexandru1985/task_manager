@@ -60,6 +60,7 @@ export default {
                             } else {
                                 label = ' ' + tooltipItems.yLabel + ' tasks';
                             }
+                            
                             return label;
                         }
                     }

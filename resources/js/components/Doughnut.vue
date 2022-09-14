@@ -37,12 +37,15 @@ export default {
                         label: function(tooltipItems, data) {
                             var countRole = data.datasets[0].data[tooltipItems.index];
                             var str = '';
+
                             if (countRole > 1) {
                                 str = 's';
                             } else {
                                 str = '';
                             }
+
                             var label = ' ' + data.datasets[0].data[tooltipItems.index] + ' ' + data.labels[tooltipItems.index] + str;
+                            
                             return label;
                         }
                     }

@@ -62,9 +62,11 @@ export default {
     },
     created() {
         var window_width = $(window).width();
+
         if(window_width < 400) {
             this.zoom = 2;
         } 
+        
         axios.get('api/get-clients')
             .then(r => r["data"])
             .then(data => {

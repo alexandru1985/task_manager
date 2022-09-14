@@ -10,11 +10,13 @@ use Illuminate\Support\Facades\Validator;
 
 class SendMailController extends Controller {
 
-    public function __construct() {
+    public function __construct() 
+    {
         $this->middleware('auth:api');
     }
 
-    public function sendMail(Request $request) {
+    public function sendMail(Request $request) 
+    {
         $array = array(
             'rules' => [
                 'to'=> 'required|email:dns',
@@ -32,6 +34,7 @@ class SendMailController extends Controller {
        );
 
         $validator = Validator::make($request->all(), $array['rules'], $array['messages']);
+        
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->messages()], 422);
         } else {
@@ -42,5 +45,4 @@ class SendMailController extends Controller {
             return response()->json(['message' => 'Mail sent'], 201);
         }
     }
-
 }

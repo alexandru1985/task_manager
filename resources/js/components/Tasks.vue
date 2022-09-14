@@ -189,6 +189,7 @@
 import { jsPDF } from "jspdf";
 import 'jspdf-autotable';
 export default {
+
     data() {
         return {
             editMode: false,
@@ -407,6 +408,7 @@ export default {
             var projectName = '';
             var taskName = '';
             var users = '';  
+            
             for (let i = 0; i < tasks.length; i++) {
                 clientName = tasks[i]['client']['name'];
                 projectName = tasks[i]['project']['name'];
