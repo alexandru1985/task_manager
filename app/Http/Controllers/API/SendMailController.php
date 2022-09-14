@@ -42,6 +42,7 @@ class SendMailController extends Controller {
             $details['subject'] = $request->subject;
             $details['message'] = $request->message;
             dispatch(new SendMailJob($details));
+            
             return response()->json(['message' => 'Mail sent'], 201);
         }
     }

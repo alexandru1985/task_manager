@@ -38,8 +38,8 @@ class TasksController extends Controller {
     public function store(Request $request) 
     {
         $array = Tasks::validation();
-
         $validator = Validator::make($request->all(), $array['rules'], $array['messages']);
+        
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->messages()], 422);
         } else {
@@ -68,8 +68,8 @@ class TasksController extends Controller {
     public function update($id, Request $request) 
     {
         $array = Tasks::validation();
-
         $validator = Validator::make($request->all(), $array['rules'], $array['messages']);
+        
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->messages()], 422);
         } else {
@@ -93,6 +93,7 @@ class TasksController extends Controller {
 
                 $tasks->users()->sync($pivot);
             }
+            
             return response()->json(['message' => 'Task updated'], 200);
         }
     }
@@ -114,6 +115,7 @@ class TasksController extends Controller {
             }
 
             $paginate = $totalTasks / 7;
+
             return response()->json(['message' => 'Task deleted', 'paginate'=> $paginate], 200);
         }
     }
